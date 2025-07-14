@@ -1,0 +1,49 @@
+REAL DATASET ANALYSIS SUMMARY
+==================================================
+
+Health Crisis:
+------------------------------
+  Covid-19 Twitter Dataset (Apr-Jun 2021).csv:
+    Records: 147,475
+    Columns: 17
+    Valid Mapping: True
+    Description: COVID-19 tweets with sentiment analysis
+
+Natural Disaster:
+------------------------------
+  Hurricane_Harvey.csv: error
+  DisasterTweets.csv:
+    Records: 2,559
+    Columns: 13
+    Valid Mapping: True
+    Description: General disaster tweets
+
+Political Crisis:
+------------------------------
+  Capital -riots.csv:
+    Records: 82,309
+    Columns: 14
+    Valid Mapping: True
+    Description: Capitol riots January 6th tweets
+  hashtag_donaldtrump.csv: error
+
+Economic Crisis:
+------------------------------
+  Bitcoin_tweets_dataset_2.csv: error
+
+Social Crisis:
+------------------------------
+  IRAhandle_tweets_1.csv:
+    Records: 381,016
+    Columns: 15
+    Valid Mapping: True
+    Description: IRA social manipulation tweets
+
+Technological Crisis:
+------------------------------
+  Facebook_outage_Tweet_data_4th_October.csv:
+    Records: 304,135
+    Columns: 36
+    Valid Mapping: True
+    Description: Facebook outage October 4th tweets
+

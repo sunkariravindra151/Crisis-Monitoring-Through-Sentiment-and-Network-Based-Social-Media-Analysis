@@ -1,0 +1,1674 @@
+2025-07-08 16:46:57,264 - CrisisDetect+.SystemTest - INFO - Centralities calculated: []
+2025-07-08 16:46:57,301 - CrisisDetect+.SystemTest - INFO - Crisis detection result:
+2025-07-08 16:46:57,301 - CrisisDetect+.SystemTest - INFO -   Severity Score: 0.275
+2025-07-08 16:46:57,301 - CrisisDetect+.SystemTest - INFO -   Severity Level: WARNING
+2025-07-08 16:46:57,301 - CrisisDetect+.SystemTest - INFO -   Confidence: 0.683
+2025-07-08 16:46:57,303 - CrisisDetect+.SystemTest - INFO - 
+==================================================
+2025-07-08 16:46:57,306 - CrisisDetect+.SystemTest - INFO - ==================================================
+2025-07-08 16:46:59,647 - CrisisDetect+.SystemTest - INFO - Sentiment: This health crisis is really c... -> POSITIVE (0.997)
+2025-07-08 16:46:59,663 - CrisisDetect+.SystemTest - INFO - Sentiment: I'm angry about this technolog... -> NEGATIVE (1.000)
+2025-07-08 16:47:02,378 - CrisisDetect+.SystemTest - INFO - Emotion: This health crisis is really c... -> neutral (0.500)
+2025-07-08 16:47:02,398 - CrisisDetect+.SystemTest - INFO - Emotion: I'm angry about this technolog... -> neutral (0.500)
+2025-07-08 16:47:02,445 - CrisisDetect+.SystemTest - INFO - 
+==================================================
+2025-07-08 16:47:02,447 - CrisisDetect+.SystemTest - INFO - ==================================================
+2025-07-08 16:47:02,449 - CrisisDetect+.SystemTest - INFO - 
+==================================================
+2025-07-08 16:47:02,452 - CrisisDetect+.SystemTest - INFO - ==================================================
+2025-07-08 16:47:02,454 - CrisisDetect+.SystemTest - INFO - 
+============================================================
+2025-07-08 16:47:02,455 - CrisisDetect+.SystemTest - INFO - ============================================================
+2025-07-08 18:08:16,198 - CrisisDetect+.StreamEmitter - INFO - Sampling 2000 records from 197475 total records
+2025-07-08 18:14:39,112 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:14:39,112 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:14:41,726 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:14:42,009 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:14:42,009 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:14:43,912 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:14:44,021 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 18:14:44,039 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:14:44,040 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:14:44,040 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for test network
+2025-07-08 18:14:44,040 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 18:14:44,042 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 50 records
+2025-07-08 18:14:44,050 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:14:44,050 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:14:44,050 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 18:14:44,051 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:14:44,052 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: WARNING | Severity: 0.273 | Time: 2025-07-08T18:14:44.052125
+2025-07-08 18:15:34,929 - CrisisDetect+.MainPipeline - INFO - [INIT] Initializing CrisisDetect+ Pipeline
+2025-07-08 18:15:34,930 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for health
+2025-07-08 18:15:34,930 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for health
+2025-07-08 18:15:34,931 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading Covid-19 Twitter Dataset (Apr-Jun 2021).csv for streaming
+2025-07-08 18:15:35,552 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading covid19_tweets.csv for streaming
+2025-07-08 18:15:35,897 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 197475 total records
+2025-07-08 18:15:35,962 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 315 records
+2025-07-08 18:15:35,962 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for health
+2025-07-08 18:15:35,963 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for health
+2025-07-08 18:15:35,963 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:15:35,963 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:15:35,963 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:38,049 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:38,050 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:15:38,050 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:39,861 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:39,861 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:39,861 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for health
+2025-07-08 18:15:39,862 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:15:39,862 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:39,862 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:15:39,862 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for health
+2025-07-08 18:15:39,862 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for technological
+2025-07-08 18:15:39,862 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for technological
+2025-07-08 18:15:39,862 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading Facebook_outage_Tweet_data_4th_October.csv for streaming
+2025-07-08 18:15:41,827 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 304135 total records
+2025-07-08 18:15:41,855 - CrisisDetect+.StreamEmitter - WARNING - [WARNING] Missing required columns: ['text']
+2025-07-08 18:15:41,908 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 1200 records
+2025-07-08 18:15:41,908 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for technological
+2025-07-08 18:15:41,908 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for technological
+2025-07-08 18:15:41,909 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:15:41,909 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:15:41,909 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:43,380 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:43,380 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:15:43,381 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:44,874 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:44,874 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:44,874 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for technological
+2025-07-08 18:15:44,874 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:15:44,875 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:44,875 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:15:44,875 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for technological
+2025-07-08 18:15:44,875 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for political
+2025-07-08 18:15:44,875 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for political
+2025-07-08 18:15:44,876 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading Capital -riots.csv for streaming
+2025-07-08 18:15:45,053 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading hashtag_donaldtrump.csv for streaming
+2025-07-08 18:15:45,069 - CrisisDetect+.StreamEmitter - WARNING - [WARNING] Failed to load hashtag_donaldtrump.csv: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+2025-07-08 18:15:45,070 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 82309 total records
+2025-07-08 18:15:45,084 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 1198 records
+2025-07-08 18:15:45,085 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for political
+2025-07-08 18:15:45,085 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for political
+2025-07-08 18:15:45,086 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:15:45,086 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:15:45,086 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:46,316 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:46,317 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:15:46,317 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:52,062 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:52,063 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:52,063 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for political
+2025-07-08 18:15:52,063 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:15:52,063 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:52,064 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:15:52,064 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for political
+2025-07-08 18:15:52,064 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for social
+2025-07-08 18:15:52,064 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for social
+2025-07-08 18:15:52,065 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading IRAhandle_tweets_1.csv for streaming
+2025-07-08 18:15:53,048 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 381016 total records
+2025-07-08 18:15:53,058 - CrisisDetect+.StreamEmitter - WARNING - [WARNING] Missing required columns: ['text', 'user_id']
+2025-07-08 18:15:53,088 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 1200 records
+2025-07-08 18:15:53,088 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for social
+2025-07-08 18:15:53,088 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for social
+2025-07-08 18:15:53,088 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:15:53,089 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:15:53,089 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:54,434 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:15:54,434 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:15:54,434 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:56,165 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:15:56,165 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:56,165 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for social
+2025-07-08 18:15:56,165 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:15:56,166 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:15:56,166 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:15:56,167 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for social
+2025-07-08 18:15:56,167 - CrisisDetect+.MainPipeline - INFO - [OK] Pipeline initialized for 4 crisis types
+2025-07-08 18:15:56,168 - CrisisDetect+.MainPipeline - INFO - [STREAM] Starting CrisisDetect+ Analysis Pipeline
+2025-07-08 18:15:56,168 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting health stream
+2025-07-08 18:15:56,168 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting technological stream
+2025-07-08 18:15:56,168 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting political stream
+2025-07-08 18:15:56,168 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting social stream
+2025-07-08 18:15:56,169 - CrisisDetect+.MainPipeline - INFO - [TIME] Running analysis for 12 minutes
+2025-07-08 18:15:56,188 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting health stream simulation
+2025-07-08 18:15:56,189 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:15:56,197 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for health
+2025-07-08 18:15:56,200 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:15:56,200 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:15:56,201 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:15:58,054 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:15:58,056 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'NEGATIVE': 0.86, 'POSITIVE': 0.14}
+2025-07-08 18:15:58,059 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: -0.685, Std: 0.591
+2025-07-08 18:15:58,059 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.850, Positive: 0.140, Neutral: 0.010
+2025-07-08 18:15:58,059 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:15:58,059 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:15:58,060 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:15:59,779 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:15:59,781 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 0.66, 'sadness': 0.15, 'fear': 0.06, 'joy': 0.05, 'anger': 0.05, 'surprise': 0.03}
+2025-07-08 18:15:59,783 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.067, Std: 0.071
+2025-07-08 18:15:59,783 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.320
+2025-07-08 18:15:59,783 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:15:59,783 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:15:59,783 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 100 records
+2025-07-08 18:15:59,800 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 1 users
+2025-07-08 18:15:59,800 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (1) for network construction
+2025-07-08 18:15:59,800 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:15:59,800 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:15:59,800 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 18:15:59,801 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:15:59,802 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: WARNING | Severity: 0.369 | Time: 2025-07-08T18:15:59.802106
+2025-07-08 18:15:59,802 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:15:59,802 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:15:59,802 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [HEALTH] CRISIS_DETECTED: Health crisis warning with severity 0.369 | Severity: 0.369 | Time: 2025-07-08T18:15:59.802639
+2025-07-08 18:15:59,802 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Health crisis warning with severity 0.369
+2025-07-08 18:15:59,802 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Health crisis warning with severity 0.369
+2025-07-08 18:15:59,803 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [HEALTH] SENTIMENT_SHIFT: Significant negative sentiment shift in health (factor: 0.980) | Severity: 0.980 | Time: 2025-07-08T18:15:59.803004
+2025-07-08 18:15:59,803 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Significant negative sentiment shift in health (factor: 0.980)
+2025-07-08 18:15:59,803 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Significant negative sentiment shift in health (factor: 0.980)
+2025-07-08 18:15:59,803 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 2 new alerts
+2025-07-08 18:15:59,813 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [HEALTH] Analysis completed - WARNING | Severity: 0.369 | Time: 2025-07-08T18:15:59.812997
+2025-07-08 18:15:59,813 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for health (severity: 0.369, level: WARNING)
+2025-07-08 18:15:59,813 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for health (buffer: 100, total: 100)
+2025-07-08 18:15:59,813 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting technological stream simulation
+2025-07-08 18:15:59,813 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:15:59,817 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for technological
+2025-07-08 18:15:59,819 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:15:59,819 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:15:59,820 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:16:01,121 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:16:01,122 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'POSITIVE': 1.0}
+2025-07-08 18:16:01,123 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: 0.955, Std: 0.000
+2025-07-08 18:16:01,124 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.000, Positive: 1.000, Neutral: 0.000
+2025-07-08 18:16:01,124 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:16:01,124 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:16:01,125 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:16:02,475 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:16:02,477 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 1.0}
+2025-07-08 18:16:02,478 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.008, Std: 0.000
+2025-07-08 18:16:02,479 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.043
+2025-07-08 18:16:02,479 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:16:02,479 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:16:02,479 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 100 records
+2025-07-08 18:16:02,499 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:16:02,499 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:16:02,500 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:16:02,500 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:16:02,500 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for technological
+2025-07-08 18:16:02,501 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:16:02,501 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [TECHNOLOGICAL] Severity calculated: SAFE | Severity: 0.088 | Time: 2025-07-08T18:16:02.501639
+2025-07-08 18:16:02,501 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:16:02,501 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:16:02,501 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 18:16:02,565 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [TECHNOLOGICAL] Analysis completed - SAFE | Severity: 0.088 | Time: 2025-07-08T18:16:02.565761
+2025-07-08 18:16:02,566 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for technological (severity: 0.088, level: SAFE)
+2025-07-08 18:16:02,566 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 100, total: 100)
+2025-07-08 18:16:02,566 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting political stream simulation
+2025-07-08 18:16:02,567 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:16:02,571 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for political
+2025-07-08 18:16:02,572 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:16:02,572 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:16:02,573 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:16:05,039 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:16:05,041 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'NEGATIVE': 0.72, 'POSITIVE': 0.28}
+2025-07-08 18:16:05,042 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: -0.419, Std: 0.843
+2025-07-08 18:16:05,042 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.720, Positive: 0.280, Neutral: 0.000
+2025-07-08 18:16:05,042 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:16:05,042 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:16:05,043 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:16:07,386 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:16:07,389 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 0.41, 'joy': 0.16, 'sadness': 0.15, 'anger': 0.11, 'fear': 0.09, 'surprise': 0.08}
+2025-07-08 18:16:07,390 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.085, Std: 0.078
+2025-07-08 18:16:07,391 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.403
+2025-07-08 18:16:07,391 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:16:07,391 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:16:07,391 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 100 records
+2025-07-08 18:16:07,407 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:16:07,407 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:16:07,407 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:16:07,407 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:16:07,408 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for political
+2025-07-08 18:16:07,409 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:16:07,409 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [POLITICAL] Severity calculated: WARNING | Severity: 0.250 | Time: 2025-07-08T18:16:07.409899
+2025-07-08 18:16:07,410 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:16:07,410 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:16:07,410 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [POLITICAL] CRISIS_DETECTED: Political crisis warning with severity 0.250 | Severity: 0.250 | Time: 2025-07-08T18:16:07.410690
+2025-07-08 18:16:07,410 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Political crisis warning with severity 0.250
+2025-07-08 18:16:07,411 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Political crisis warning with severity 0.250
+2025-07-08 18:16:07,411 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [POLITICAL] SENTIMENT_SHIFT: Significant negative sentiment shift in political (factor: 0.818) | Severity: 0.818 | Time: 2025-07-08T18:16:07.411256
+2025-07-08 18:16:07,411 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Significant negative sentiment shift in political (factor: 0.818)
+2025-07-08 18:16:07,411 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Significant negative sentiment shift in political (factor: 0.818)
+2025-07-08 18:16:07,411 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 2 new alerts
+2025-07-08 18:16:07,413 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [POLITICAL] Analysis completed - WARNING | Severity: 0.250 | Time: 2025-07-08T18:16:07.413488
+2025-07-08 18:16:07,413 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for political (severity: 0.250, level: WARNING)
+2025-07-08 18:16:07,413 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 100, total: 100)
+2025-07-08 18:16:07,414 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting social stream simulation
+2025-07-08 18:16:07,414 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:16:07,547 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for social
+2025-07-08 18:16:07,549 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:16:07,549 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:16:07,550 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:16:09,055 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:16:09,056 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'POSITIVE': 1.0}
+2025-07-08 18:16:09,057 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: 0.955, Std: 0.000
+2025-07-08 18:16:09,058 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.000, Positive: 1.000, Neutral: 0.000
+2025-07-08 18:16:09,058 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:16:09,058 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:16:09,058 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:16:10,425 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:16:10,427 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 1.0}
+2025-07-08 18:16:10,428 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.008, Std: 0.000
+2025-07-08 18:16:10,428 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.043
+2025-07-08 18:16:10,428 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:16:10,428 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:16:10,428 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 100 records
+2025-07-08 18:16:10,443 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:16:10,443 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:16:10,443 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:16:10,444 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:16:10,444 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for social
+2025-07-08 18:16:10,444 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:16:10,445 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [SOCIAL] Severity calculated: SAFE | Severity: 0.090 | Time: 2025-07-08T18:16:10.445211
+2025-07-08 18:16:10,445 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:16:10,445 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:16:10,445 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 18:16:10,446 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [SOCIAL] Analysis completed - SAFE | Severity: 0.090 | Time: 2025-07-08T18:16:10.446779
+2025-07-08 18:16:10,446 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for social (severity: 0.090, level: SAFE)
+2025-07-08 18:16:10,447 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 100, total: 100)
+2025-07-08 18:16:10,452 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for health (buffer: 200, total: 200)
+2025-07-08 18:16:10,456 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 200, total: 200)
+2025-07-08 18:16:10,459 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 200, total: 200)
+2025-07-08 18:17:42,104 - CrisisDetect+.MainPipeline - INFO - [INIT] Initializing CrisisDetect+ Pipeline
+2025-07-08 18:17:42,104 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for health
+2025-07-08 18:17:42,105 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for health
+2025-07-08 18:17:42,105 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading Covid-19 Twitter Dataset (Apr-Jun 2021).csv for streaming
+2025-07-08 18:17:42,700 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading covid19_tweets.csv for streaming
+2025-07-08 18:17:43,020 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 197475 total records
+2025-07-08 18:17:43,069 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 315 records
+2025-07-08 18:17:43,069 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for health
+2025-07-08 18:17:43,069 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for health
+2025-07-08 18:17:43,070 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:17:43,070 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:17:43,070 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:45,837 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:45,838 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:17:45,838 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:48,104 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:48,104 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:48,105 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for health
+2025-07-08 18:17:48,105 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:17:48,106 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:48,106 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:17:48,106 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for health
+2025-07-08 18:17:48,107 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for technological
+2025-07-08 18:17:48,107 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for technological
+2025-07-08 18:17:48,107 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading Facebook_outage_Tweet_data_4th_October.csv for streaming
+2025-07-08 18:17:49,899 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 304135 total records
+2025-07-08 18:17:49,907 - CrisisDetect+.StreamEmitter - WARNING - [WARNING] Missing required columns: ['text']
+2025-07-08 18:17:49,960 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 1200 records
+2025-07-08 18:17:49,961 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for technological
+2025-07-08 18:17:49,961 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for technological
+2025-07-08 18:17:49,961 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:17:49,962 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:17:49,962 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:51,195 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:51,195 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:17:51,196 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:52,900 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:52,900 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:52,901 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for technological
+2025-07-08 18:17:52,901 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:17:52,901 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:52,901 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:17:52,901 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for technological
+2025-07-08 18:17:52,902 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for political
+2025-07-08 18:17:52,902 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for political
+2025-07-08 18:17:52,902 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading Capital -riots.csv for streaming
+2025-07-08 18:17:53,067 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading hashtag_donaldtrump.csv for streaming
+2025-07-08 18:17:53,079 - CrisisDetect+.StreamEmitter - WARNING - [WARNING] Failed to load hashtag_donaldtrump.csv: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+2025-07-08 18:17:53,080 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 82309 total records
+2025-07-08 18:17:53,090 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 1198 records
+2025-07-08 18:17:53,090 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for political
+2025-07-08 18:17:53,090 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for political
+2025-07-08 18:17:53,091 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:17:53,091 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:17:53,091 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:54,692 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:54,692 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:17:54,692 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:56,220 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:56,221 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:56,221 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for political
+2025-07-08 18:17:56,221 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:17:56,222 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:56,222 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:17:56,222 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for political
+2025-07-08 18:17:56,222 - CrisisDetect+.MainPipeline - INFO - [CONFIG] Initializing components for social
+2025-07-08 18:17:56,223 - CrisisDetect+.StreamEmitter - INFO - [INIT] Initializing stream emitter for social
+2025-07-08 18:17:56,223 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Loading IRAhandle_tweets_1.csv for streaming
+2025-07-08 18:17:57,169 - CrisisDetect+.StreamEmitter - INFO - Sampling 1200 records from 381016 total records
+2025-07-08 18:17:57,178 - CrisisDetect+.StreamEmitter - WARNING - [WARNING] Missing required columns: ['text', 'user_id']
+2025-07-08 18:17:57,203 - CrisisDetect+.StreamEmitter - INFO - [OK] Stream emitter initialized with 1200 records
+2025-07-08 18:17:57,204 - CrisisDetect+.MainPipeline - INFO - [OK] Stream emitter ready for social
+2025-07-08 18:17:57,204 - CrisisDetect+.CrisisStreamHandler - INFO - [INIT] Initializing crisis stream handler for social
+2025-07-08 18:17:57,204 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Loading NLP models...
+2025-07-08 18:17:57,205 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:17:57,205 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:58,474 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:17:58,474 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:17:58,474 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:59,981 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:17:59,981 - CrisisDetect+.AlertEngine - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:59,981 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis stream handler initialized for social
+2025-07-08 18:17:59,982 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered result callback: _handle_analysis_result
+2025-07-08 18:17:59,982 - CrisisDetect+.CrisisStreamHandler - INFO - [UNICODE] Registered alert callback: _handle_alert
+2025-07-08 18:17:59,982 - CrisisDetect+.StreamEmitter - INFO - [UNICODE] Registered stream callback: process_stream_batch
+2025-07-08 18:17:59,982 - CrisisDetect+.MainPipeline - INFO - [OK] Stream handler ready for social
+2025-07-08 18:17:59,983 - CrisisDetect+.MainPipeline - INFO - [OK] Pipeline initialized for 4 crisis types
+2025-07-08 18:17:59,983 - CrisisDetect+.MainPipeline - INFO - [STREAM] Starting CrisisDetect+ Analysis Pipeline
+2025-07-08 18:17:59,983 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting health stream
+2025-07-08 18:17:59,983 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting technological stream
+2025-07-08 18:17:59,983 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting political stream
+2025-07-08 18:17:59,983 - CrisisDetect+.MainPipeline - INFO - [INIT] Starting social stream
+2025-07-08 18:17:59,984 - CrisisDetect+.MainPipeline - INFO - [TIME] Running analysis for 12 minutes
+2025-07-08 18:17:59,984 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting health stream simulation
+2025-07-08 18:17:59,984 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:17:59,989 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for health
+2025-07-08 18:17:59,991 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:17:59,991 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:17:59,992 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:18:01,646 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:18:01,647 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'NEGATIVE': 0.86, 'POSITIVE': 0.14}
+2025-07-08 18:18:01,649 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: -0.685, Std: 0.591
+2025-07-08 18:18:01,649 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.850, Positive: 0.140, Neutral: 0.010
+2025-07-08 18:18:01,649 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:18:01,649 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:18:01,650 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:18:03,240 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:18:03,242 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 0.66, 'sadness': 0.15, 'fear': 0.06, 'joy': 0.05, 'anger': 0.05, 'surprise': 0.03}
+2025-07-08 18:18:03,243 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.067, Std: 0.071
+2025-07-08 18:18:03,244 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.320
+2025-07-08 18:18:03,244 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:18:03,244 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:18:03,244 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 100 records
+2025-07-08 18:18:03,260 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 1 users
+2025-07-08 18:18:03,260 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (1) for network construction
+2025-07-08 18:18:03,260 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:18:03,260 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:18:03,260 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 18:18:03,261 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:18:03,261 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: WARNING | Severity: 0.369 | Time: 2025-07-08T18:18:03.261881
+2025-07-08 18:18:03,262 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:18:03,262 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:18:03,262 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [HEALTH] CRISIS_DETECTED: Health crisis warning with severity 0.369 | Severity: 0.369 | Time: 2025-07-08T18:18:03.262239
+2025-07-08 18:18:03,262 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Health crisis warning with severity 0.369
+2025-07-08 18:18:03,262 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Health crisis warning with severity 0.369
+2025-07-08 18:18:03,262 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [HEALTH] SENTIMENT_SHIFT: Significant negative sentiment shift in health (factor: 0.980) | Severity: 0.980 | Time: 2025-07-08T18:18:03.262486
+2025-07-08 18:18:03,262 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Significant negative sentiment shift in health (factor: 0.980)
+2025-07-08 18:18:03,262 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Significant negative sentiment shift in health (factor: 0.980)
+2025-07-08 18:18:03,262 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 2 new alerts
+2025-07-08 18:18:03,265 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [HEALTH] Analysis completed - WARNING | Severity: 0.369 | Time: 2025-07-08T18:18:03.265169
+2025-07-08 18:18:03,265 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for health (severity: 0.369, level: WARNING)
+2025-07-08 18:18:03,265 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for health (buffer: 100, total: 100)
+2025-07-08 18:18:03,266 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting technological stream simulation
+2025-07-08 18:18:03,266 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:18:03,270 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for technological
+2025-07-08 18:18:03,272 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:18:03,272 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:18:03,273 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:18:04,481 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:18:04,483 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'POSITIVE': 1.0}
+2025-07-08 18:18:04,484 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: 0.955, Std: 0.000
+2025-07-08 18:18:04,484 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.000, Positive: 1.000, Neutral: 0.000
+2025-07-08 18:18:04,484 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:18:04,484 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:18:04,485 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:18:05,699 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:18:05,701 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 1.0}
+2025-07-08 18:18:05,702 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.008, Std: 0.000
+2025-07-08 18:18:05,703 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.043
+2025-07-08 18:18:05,703 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:18:05,703 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:18:05,703 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 100 records
+2025-07-08 18:18:05,716 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:18:05,716 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:18:05,717 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:18:05,717 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:18:05,717 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for technological
+2025-07-08 18:18:05,718 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:18:05,719 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [TECHNOLOGICAL] Severity calculated: SAFE | Severity: 0.088 | Time: 2025-07-08T18:18:05.718985
+2025-07-08 18:18:05,719 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:18:05,719 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:18:05,719 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 18:18:05,753 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [TECHNOLOGICAL] Analysis completed - SAFE | Severity: 0.088 | Time: 2025-07-08T18:18:05.753637
+2025-07-08 18:18:05,754 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for technological (severity: 0.088, level: SAFE)
+2025-07-08 18:18:05,754 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 100, total: 100)
+2025-07-08 18:18:05,754 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting political stream simulation
+2025-07-08 18:18:05,755 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:18:05,758 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for political
+2025-07-08 18:18:05,759 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:18:05,760 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:18:05,760 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:18:07,820 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:18:07,822 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'NEGATIVE': 0.72, 'POSITIVE': 0.28}
+2025-07-08 18:18:07,823 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: -0.419, Std: 0.843
+2025-07-08 18:18:07,823 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.720, Positive: 0.280, Neutral: 0.000
+2025-07-08 18:18:07,823 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:18:07,823 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:18:07,823 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:18:09,906 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:18:09,908 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 0.41, 'joy': 0.16, 'sadness': 0.15, 'anger': 0.11, 'fear': 0.09, 'surprise': 0.08}
+2025-07-08 18:18:09,909 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.085, Std: 0.078
+2025-07-08 18:18:09,910 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.403
+2025-07-08 18:18:09,910 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:18:09,910 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:18:09,910 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 100 records
+2025-07-08 18:18:09,925 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:18:09,925 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:18:09,926 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:18:09,926 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:18:09,926 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for political
+2025-07-08 18:18:09,927 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:18:09,927 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [POLITICAL] Severity calculated: WARNING | Severity: 0.250 | Time: 2025-07-08T18:18:09.927427
+2025-07-08 18:18:09,927 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:18:09,927 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:18:09,927 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [POLITICAL] CRISIS_DETECTED: Political crisis warning with severity 0.250 | Severity: 0.250 | Time: 2025-07-08T18:18:09.927751
+2025-07-08 18:18:09,927 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Political crisis warning with severity 0.250
+2025-07-08 18:18:09,927 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Political crisis warning with severity 0.250
+2025-07-08 18:18:09,928 - CrisisDetect+.AlertEngine - INFO - [CRISIS] [POLITICAL] SENTIMENT_SHIFT: Significant negative sentiment shift in political (factor: 0.818) | Severity: 0.818 | Time: 2025-07-08T18:18:09.928029
+2025-07-08 18:18:09,928 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Alert generated: Significant negative sentiment shift in political (factor: 0.818)
+2025-07-08 18:18:09,928 - CrisisDetect+.MainPipeline - INFO - [CRISIS] SYSTEM ALERT: Significant negative sentiment shift in political (factor: 0.818)
+2025-07-08 18:18:09,928 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 2 new alerts
+2025-07-08 18:18:09,929 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [POLITICAL] Analysis completed - WARNING | Severity: 0.250 | Time: 2025-07-08T18:18:09.929652
+2025-07-08 18:18:09,929 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for political (severity: 0.250, level: WARNING)
+2025-07-08 18:18:09,929 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 100, total: 100)
+2025-07-08 18:18:09,930 - CrisisDetect+.StreamEmitter - INFO - [STREAM] Starting social stream simulation
+2025-07-08 18:18:09,930 - CrisisDetect+.StreamEmitter - INFO - [DATA] Stream config: batch_size=100, interval=2.0s, speed=1.0x
+2025-07-08 18:18:10,047 - CrisisDetect+.CrisisStreamHandler - INFO - [ANALYSIS] Starting crisis analysis for social
+2025-07-08 18:18:10,049 - CrisisDetect+.CrisisStreamHandler - INFO - [NLP] Performing NLP analysis...
+2025-07-08 18:18:10,049 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Starting sentiment analysis for 100 records
+2025-07-08 18:18:10,049 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 100 texts in batches of 32
+2025-07-08 18:18:11,261 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 100 texts
+2025-07-08 18:18:11,262 - CrisisDetect+.SentimentClassifier - INFO - [PROGRESS] Sentiment Distribution: {'POSITIVE': 1.0}
+2025-07-08 18:18:11,263 - CrisisDetect+.SentimentClassifier - INFO - [DATA] Compound Score Stats - Mean: 0.955, Std: 0.000
+2025-07-08 18:18:11,263 - CrisisDetect+.SentimentClassifier - INFO - [TARGET] Crisis Metrics - Negative: 0.000, Positive: 1.000, Neutral: 0.000
+2025-07-08 18:18:11,264 - CrisisDetect+.SentimentClassifier - INFO - [OK] Sentiment analysis completed
+2025-07-08 18:18:11,264 - CrisisDetect+.EmotionClassifier - INFO - [DATA] Starting emotion analysis for 100 records
+2025-07-08 18:18:11,264 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 100 texts for emotion analysis
+2025-07-08 18:18:12,471 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 100 texts
+2025-07-08 18:18:12,473 - CrisisDetect+.EmotionClassifier - INFO - [EMOTION] Emotion Distribution: {'neutral': 1.0}
+2025-07-08 18:18:12,474 - CrisisDetect+.EmotionClassifier - INFO - [CRISIS] Crisis Intensity Stats - Mean: 0.008, Std: 0.000
+2025-07-08 18:18:12,474 - CrisisDetect+.EmotionClassifier - INFO - [WARNING] Average Crisis Emotion Ratio: 0.043
+2025-07-08 18:18:12,474 - CrisisDetect+.EmotionClassifier - INFO - [OK] Emotion analysis completed
+2025-07-08 18:18:12,474 - CrisisDetect+.CrisisStreamHandler - INFO - [NETWORK] Building crisis network...
+2025-07-08 18:18:12,474 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 100 records
+2025-07-08 18:18:12,488 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 0 users
+2025-07-08 18:18:12,489 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (0) for network construction
+2025-07-08 18:18:12,489 - CrisisDetect+.CrisisStreamHandler - INFO - [DATA] Calculating network metrics...
+2025-07-08 18:18:12,489 - CrisisDetect+.CrisisStreamHandler - INFO - [CRISIS] Calculating crisis severity...
+2025-07-08 18:18:12,489 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for social
+2025-07-08 18:18:12,490 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 18:18:12,491 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [SOCIAL] Severity calculated: SAFE | Severity: 0.090 | Time: 2025-07-08T18:18:12.491254
+2025-07-08 18:18:12,491 - CrisisDetect+.CrisisStreamHandler - INFO - [ALERT] Processing alerts...
+2025-07-08 18:18:12,491 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 18:18:12,491 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 18:18:12,493 - CrisisDetect+.MainPipeline - INFO - [CRISIS] [SOCIAL] Analysis completed - SAFE | Severity: 0.090 | Time: 2025-07-08T18:18:12.493478
+2025-07-08 18:18:12,493 - CrisisDetect+.CrisisStreamHandler - INFO - [OK] Crisis analysis completed for social (severity: 0.090, level: SAFE)
+2025-07-08 18:18:12,494 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 100, total: 100)
+2025-07-08 18:18:12,498 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for health (buffer: 200, total: 200)
+2025-07-08 18:18:12,502 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 200, total: 200)
+2025-07-08 18:18:12,505 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 200, total: 200)
+2025-07-08 18:18:14,500 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 200, total: 200)
+2025-07-08 18:18:14,504 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for health (buffer: 300, total: 300)
+2025-07-08 18:18:14,508 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 300, total: 300)
+2025-07-08 18:18:14,513 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 300, total: 300)
+2025-07-08 18:18:16,512 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 300, total: 300)
+2025-07-08 18:18:16,516 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 15 records for health (buffer: 315, total: 315)
+2025-07-08 18:18:16,520 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 400, total: 400)
+2025-07-08 18:18:16,525 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 400, total: 400)
+2025-07-08 18:18:18,535 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 400, total: 400)
+2025-07-08 18:18:18,536 - CrisisDetect+.StreamEmitter - INFO - [OK] Streaming completed for health
+2025-07-08 18:18:18,536 - CrisisDetect+.StreamEmitter - INFO - [DATA] health streaming complete:
+2025-07-08 18:18:18,536 - CrisisDetect+.StreamEmitter - INFO -    [BATCH] Total records: 315
+2025-07-08 18:18:18,536 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total batches: 4
+2025-07-08 18:18:18,536 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total time: 18.6s
+2025-07-08 18:18:18,537 - CrisisDetect+.StreamEmitter - INFO -    [INIT] Average rate: 17.0 records/sec
+2025-07-08 18:18:18,540 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 500, total: 500)
+2025-07-08 18:18:18,544 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 500, total: 500)
+2025-07-08 18:18:20,548 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 500, total: 500)
+2025-07-08 18:18:20,552 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 600, total: 600)
+2025-07-08 18:18:20,557 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 600, total: 600)
+2025-07-08 18:18:22,556 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 600, total: 600)
+2025-07-08 18:18:22,560 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 700, total: 700)
+2025-07-08 18:18:22,564 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 700, total: 700)
+2025-07-08 18:18:24,570 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 700, total: 700)
+2025-07-08 18:18:24,575 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 800, total: 800)
+2025-07-08 18:18:24,578 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 800, total: 800)
+2025-07-08 18:18:26,578 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 800, total: 800)
+2025-07-08 18:18:26,583 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 900, total: 900)
+2025-07-08 18:18:26,589 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 900, total: 900)
+2025-07-08 18:18:28,589 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 900, total: 900)
+2025-07-08 18:18:28,594 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 1000, total: 1000)
+2025-07-08 18:18:28,594 - CrisisDetect+.StreamEmitter - INFO - [PROGRESS] technological stream progress: 83.3% (1000 records, 39.5 records/sec)
+2025-07-08 18:18:28,599 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 1000, total: 1000)
+2025-07-08 18:18:28,599 - CrisisDetect+.StreamEmitter - INFO - [PROGRESS] political stream progress: 83.5% (1000 records, 43.8 records/sec)
+2025-07-08 18:18:30,606 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 1000, total: 1000)
+2025-07-08 18:18:30,606 - CrisisDetect+.StreamEmitter - INFO - [PROGRESS] social stream progress: 83.3% (1000 records, 48.4 records/sec)
+2025-07-08 18:18:30,610 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 1000, total: 1100)
+2025-07-08 18:18:30,613 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for political (buffer: 1000, total: 1100)
+2025-07-08 18:18:32,619 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 1000, total: 1100)
+2025-07-08 18:18:32,623 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for technological (buffer: 1000, total: 1200)
+2025-07-08 18:18:32,627 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 98 records for political (buffer: 1000, total: 1198)
+2025-07-08 18:18:34,629 - CrisisDetect+.CrisisStreamHandler - INFO - [BATCH] Processed batch: 100 records for social (buffer: 1000, total: 1200)
+2025-07-08 18:18:34,630 - CrisisDetect+.StreamEmitter - INFO - [OK] Streaming completed for technological
+2025-07-08 18:18:34,630 - CrisisDetect+.StreamEmitter - INFO - [DATA] technological streaming complete:
+2025-07-08 18:18:34,630 - CrisisDetect+.StreamEmitter - INFO -    [BATCH] Total records: 1200
+2025-07-08 18:18:34,630 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total batches: 12
+2025-07-08 18:18:34,631 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total time: 31.4s
+2025-07-08 18:18:34,631 - CrisisDetect+.StreamEmitter - INFO -    [INIT] Average rate: 38.3 records/sec
+2025-07-08 18:18:34,631 - CrisisDetect+.StreamEmitter - INFO - [OK] Streaming completed for political
+2025-07-08 18:18:34,631 - CrisisDetect+.StreamEmitter - INFO - [DATA] political streaming complete:
+2025-07-08 18:18:34,631 - CrisisDetect+.StreamEmitter - INFO -    [BATCH] Total records: 1198
+2025-07-08 18:18:34,632 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total batches: 12
+2025-07-08 18:18:34,632 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total time: 28.9s
+2025-07-08 18:18:34,632 - CrisisDetect+.StreamEmitter - INFO -    [INIT] Average rate: 41.5 records/sec
+2025-07-08 18:18:36,640 - CrisisDetect+.StreamEmitter - INFO - [OK] Streaming completed for social
+2025-07-08 18:18:36,642 - CrisisDetect+.StreamEmitter - INFO - [DATA] social streaming complete:
+2025-07-08 18:18:36,644 - CrisisDetect+.StreamEmitter - INFO -    [BATCH] Total records: 1200
+2025-07-08 18:18:36,644 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total batches: 12
+2025-07-08 18:18:36,645 - CrisisDetect+.StreamEmitter - INFO -    [UNICODE] Total time: 26.7s
+2025-07-08 18:18:36,645 - CrisisDetect+.StreamEmitter - INFO -    [INIT] Average rate: 44.9 records/sec
+2025-07-08 18:49:20,282 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:49:20,282 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:49:22,713 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:49:22,721 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 18:49:22,722 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 18:54:05,760 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:54:05,761 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:54:08,401 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:54:08,401 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 3 texts in batches of 32
+2025-07-08 18:54:08,491 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 3 texts
+2025-07-08 18:54:08,492 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:54:08,492 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:54:11,031 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:54:11,031 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 3 texts for emotion analysis
+2025-07-08 18:54:11,100 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 3 texts
+2025-07-08 18:54:11,147 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 18:54:11,170 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 18:57:48,286 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 18:57:48,286 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:57:51,349 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 18:57:51,350 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 3 texts in batches of 32
+2025-07-08 18:57:51,420 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 3 texts
+2025-07-08 18:57:51,420 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 18:57:51,420 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:57:53,347 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 18:57:53,347 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 3 texts for emotion analysis
+2025-07-08 18:57:53,415 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 3 texts
+2025-07-08 18:57:53,464 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 18:57:53,470 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 5 users
+2025-07-08 18:57:53,470 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (5) for network construction
+2025-07-08 18:57:53,472 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 19:04:00,058 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:04:00,059 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:04:00,059 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:04:00,059 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:04:00,059 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:04:04,535 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:04:04,535 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:04:04,536 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:04:04,536 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:04:04,536 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:04:04,536 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:04:06,491 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:04:06,491 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:04:06,492 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:04:06,492 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:04:06,492 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:04:06,493 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:04:06,493 - CrisisDetect+ - ERROR - Failed to analyze health: 'data_files'
+2025-07-08 19:04:06,493 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:04:06,493 - CrisisDetect+ - ERROR - Failed to analyze technological: 'data_files'
+2025-07-08 19:04:06,493 - CrisisDetect+ - INFO - Loading data for political crisis...
+2025-07-08 19:04:06,494 - CrisisDetect+ - ERROR - Failed to analyze political: 'data_files'
+2025-07-08 19:04:06,494 - CrisisDetect+ - INFO - Loading data for social crisis...
+2025-07-08 19:04:06,494 - CrisisDetect+ - ERROR - Failed to analyze social: 'data_files'
+2025-07-08 19:04:06,518 - CrisisDetect+ - INFO - Results saved to results\outputs
+2025-07-08 19:04:06,518 - CrisisDetect+ - INFO - Main results: crisis_analysis_complete_20250708_190406.json
+2025-07-08 19:04:06,518 - CrisisDetect+ - INFO - Rankings: crisis_rankings_20250708_190406.csv
+2025-07-08 19:12:55,039 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:12:55,039 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:12:55,039 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:12:55,039 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:12:55,039 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:12:57,383 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:12:57,383 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:12:57,384 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:12:57,384 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:12:57,385 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:12:57,385 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:12:59,597 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:12:59,597 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:12:59,598 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:12:59,598 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:12:59,599 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:12:59,599 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:13:00,193 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:13:00,480 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:13:00,521 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:13:00,542 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:13:00,561 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:13:00,561 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:13:00,562 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:13:00,562 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:13:34,903 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:13:34,903 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:13:34,904 - CrisisDetect+ - ERROR - Failed to analyze health: 'compound_score'
+2025-07-08 19:13:34,905 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:13:36,347 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:13:36,348 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:13:36,357 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:13:36,401 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:13:36,402 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:13:36,402 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:13:36,402 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:14:32,587 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:14:32,587 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:14:32,587 - CrisisDetect+ - ERROR - Failed to analyze technological: 'compound_score'
+2025-07-08 19:14:32,588 - CrisisDetect+ - INFO - Loading data for political crisis...
+2025-07-08 19:14:32,740 - CrisisDetect+ - INFO - Loaded 82309 records from Capital -riots.csv
+2025-07-08 19:14:32,753 - CrisisDetect+ - WARNING - Failed to load hashtag_donaldtrump.csv: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+2025-07-08 19:14:32,754 - CrisisDetect+ - INFO - Combined dataset: 82309 total records
+2025-07-08 19:14:32,756 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:14:32,768 - CrisisDetect+ - INFO - Starting analysis for political crisis...
+2025-07-08 19:14:32,768 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:14:32,768 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:14:32,768 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:15:29,081 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:15:29,081 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:15:29,082 - CrisisDetect+ - ERROR - Failed to analyze political: 'compound_score'
+2025-07-08 19:15:29,082 - CrisisDetect+ - INFO - Loading data for social crisis...
+2025-07-08 19:15:29,930 - CrisisDetect+ - INFO - Loaded 381016 records from IRAhandle_tweets_1.csv
+2025-07-08 19:15:29,930 - CrisisDetect+ - INFO - Combined dataset: 381016 total records
+2025-07-08 19:15:29,939 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:15:29,964 - CrisisDetect+ - INFO - Starting analysis for social crisis...
+2025-07-08 19:15:29,964 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:15:29,965 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:15:29,965 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:16:31,840 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:16:31,840 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:16:31,841 - CrisisDetect+ - ERROR - Failed to analyze social: 'compound_score'
+2025-07-08 19:16:31,845 - CrisisDetect+ - INFO - Results saved to results\outputs
+2025-07-08 19:16:31,845 - CrisisDetect+ - INFO - Main results: crisis_analysis_complete_20250708_191631.json
+2025-07-08 19:16:31,845 - CrisisDetect+ - INFO - Rankings: crisis_rankings_20250708_191631.csv
+2025-07-08 19:20:13,618 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:20:13,618 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:20:13,618 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:20:13,619 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:20:13,619 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:20:16,876 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:20:16,876 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:20:16,877 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:20:16,877 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:20:16,878 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:20:16,878 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:20:19,295 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:20:19,295 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:20:19,296 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:20:19,296 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:20:19,297 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:20:19,297 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:20:19,855 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:20:20,136 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:20:20,173 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:20:20,194 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:20:20,213 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:20:20,213 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:20:20,214 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:20:20,214 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:20:53,903 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:20:53,903 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:20:53,903 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:20:53,903 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:21:27,849 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:21:27,849 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:21:27,855 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.513
+2025-07-08 19:21:27,855 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:21:27,856 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:21:27,856 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:21:27,856 - CrisisDetect+ - ERROR - Failed to analyze health: Missing required columns: ['sentiment_compound']
+2025-07-08 19:21:27,857 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:21:30,235 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:21:30,235 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:21:30,247 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:21:30,310 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:21:30,311 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:21:30,311 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:21:30,311 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:22:32,012 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:22:32,012 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:22:32,015 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:22:32,015 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:23:30,945 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:23:30,945 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:23:30,948 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.834
+2025-07-08 19:23:30,949 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:23:30,949 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 2500 records
+2025-07-08 19:23:30,949 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 2500 records
+2025-07-08 19:23:30,949 - CrisisDetect+ - ERROR - Failed to analyze technological: Missing required columns: ['sentiment_compound']
+2025-07-08 19:23:30,950 - CrisisDetect+ - INFO - Loading data for political crisis...
+2025-07-08 19:23:31,102 - CrisisDetect+ - INFO - Loaded 82309 records from Capital -riots.csv
+2025-07-08 19:23:31,116 - CrisisDetect+ - WARNING - Failed to load hashtag_donaldtrump.csv: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+2025-07-08 19:23:31,117 - CrisisDetect+ - INFO - Combined dataset: 82309 total records
+2025-07-08 19:23:31,125 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:23:31,147 - CrisisDetect+ - INFO - Starting analysis for political crisis...
+2025-07-08 19:23:31,147 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:23:31,148 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:23:31,148 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:24:27,451 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:24:27,451 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:24:27,452 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:24:27,452 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:25:23,939 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:25:23,939 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:25:23,942 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.491
+2025-07-08 19:25:23,942 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:25:23,942 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 2500 records
+2025-07-08 19:25:23,942 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 2500 records
+2025-07-08 19:25:23,943 - CrisisDetect+ - ERROR - Failed to analyze political: Missing required columns: ['sentiment_compound']
+2025-07-08 19:25:23,943 - CrisisDetect+ - INFO - Loading data for social crisis...
+2025-07-08 19:25:24,798 - CrisisDetect+ - INFO - Loaded 381016 records from IRAhandle_tweets_1.csv
+2025-07-08 19:25:24,799 - CrisisDetect+ - INFO - Combined dataset: 381016 total records
+2025-07-08 19:25:24,808 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:25:24,832 - CrisisDetect+ - INFO - Starting analysis for social crisis...
+2025-07-08 19:25:24,832 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:25:24,833 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:25:24,833 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:26:27,428 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:26:27,428 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:26:27,428 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:26:27,428 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:27:39,496 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:27:39,496 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:27:39,501 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.655
+2025-07-08 19:27:39,501 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:27:39,502 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 2500 records
+2025-07-08 19:27:39,502 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 2500 records
+2025-07-08 19:27:39,502 - CrisisDetect+ - ERROR - Failed to analyze social: Missing required columns: ['sentiment_compound']
+2025-07-08 19:27:39,509 - CrisisDetect+ - INFO - Results saved to results\outputs
+2025-07-08 19:27:39,509 - CrisisDetect+ - INFO - Main results: crisis_analysis_complete_20250708_192739.json
+2025-07-08 19:27:39,510 - CrisisDetect+ - INFO - Rankings: crisis_rankings_20250708_192739.csv
+2025-07-08 19:29:17,982 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:29:17,982 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:29:17,982 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:29:17,983 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:29:17,983 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:29:21,375 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:29:21,375 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:29:21,375 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:29:21,375 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:29:21,376 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:29:21,376 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:29:23,163 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:29:23,163 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:29:23,164 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:29:23,164 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:29:23,164 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:29:23,164 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:29:23,753 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:29:24,060 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:29:24,107 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:29:24,131 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:29:24,165 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:29:24,166 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:29:24,166 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:29:24,166 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:30:01,306 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:30:01,306 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:30:01,307 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:30:01,307 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:30:36,585 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:30:36,585 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:30:36,589 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.513
+2025-07-08 19:30:36,590 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:30:36,590 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:30:36,590 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:30:36,598 - CrisisDetect+ - ERROR - Failed to analyze health: agg function failed [how->mean,dtype->object]
+2025-07-08 19:30:36,599 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:30:37,988 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:30:37,989 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:30:37,997 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:30:38,043 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:30:38,044 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:30:38,044 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:30:38,044 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:31:48,519 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:31:48,520 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:31:50,939 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:31:50,940 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 3 texts in batches of 32
+2025-07-08 19:31:51,009 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 3 texts
+2025-07-08 19:31:51,009 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:31:51,010 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:31:53,059 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:31:53,059 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 3 texts for emotion analysis
+2025-07-08 19:31:53,129 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 3 texts
+2025-07-08 19:31:53,176 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 19:31:53,182 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 5 users
+2025-07-08 19:31:53,182 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (5) for network construction
+2025-07-08 19:31:53,183 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for test network
+2025-07-08 19:31:53,183 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 19:31:53,184 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 19:31:53,749 - CrisisTest - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:31:54,044 - CrisisTest - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:31:54,102 - CrisisTest - INFO - Prepared 50 records for health testing
+2025-07-08 19:31:54,121 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for {'basic_stats': {'nodes': 10, 'edges': 15, 'density': 0.3}, 'centralities': {}}
+2025-07-08 19:32:57,402 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:32:57,403 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:33:00,178 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:33:00,178 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 3 texts in batches of 32
+2025-07-08 19:33:00,252 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 3 texts
+2025-07-08 19:33:00,253 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:33:00,253 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:33:02,392 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:33:02,392 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 3 texts for emotion analysis
+2025-07-08 19:33:02,458 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 3 texts
+2025-07-08 19:33:02,504 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 19:33:02,509 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 5 users
+2025-07-08 19:33:02,510 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (5) for network construction
+2025-07-08 19:33:02,510 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for test network
+2025-07-08 19:33:02,510 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 19:33:02,511 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 19:33:03,063 - CrisisTest - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:33:03,341 - CrisisTest - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:33:03,397 - CrisisTest - INFO - Prepared 50 records for health testing
+2025-07-08 19:33:03,414 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for {'basic_stats': {'nodes': 10, 'edges': 15, 'density': 0.3}, 'centralities': {}}
+2025-07-08 19:34:43,738 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:34:43,739 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:34:46,713 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:34:46,713 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 3 texts in batches of 32
+2025-07-08 19:34:46,783 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 3 texts
+2025-07-08 19:34:46,783 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:34:46,783 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:34:48,838 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:34:48,838 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 3 texts for emotion analysis
+2025-07-08 19:34:48,917 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 3 texts
+2025-07-08 19:34:48,969 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 19:34:48,975 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 5 users
+2025-07-08 19:34:48,975 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (5) for network construction
+2025-07-08 19:34:48,976 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for test network
+2025-07-08 19:34:48,976 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 19:34:48,976 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 19:34:49,534 - CrisisTest - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:34:49,813 - CrisisTest - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:34:49,871 - CrisisTest - INFO - Prepared 50 records for health testing
+2025-07-08 19:34:49,888 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 19:34:49,889 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No sentiment data available
+2025-07-08 19:34:49,890 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No emotion data available
+2025-07-08 19:34:49,891 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: SAFE | Severity: 0.060 | Time: 2025-07-08T19:34:49.891052
+2025-07-08 19:35:10,436 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:35:10,436 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:35:10,436 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:35:10,436 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:35:10,436 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:35:12,990 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:35:12,990 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:35:12,990 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:35:12,990 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:35:12,991 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:35:12,991 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:35:16,948 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:35:16,948 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:35:16,949 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:35:16,949 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:35:16,949 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:35:16,949 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:35:17,507 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:35:17,793 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:35:17,833 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:35:17,857 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:35:17,876 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:35:17,876 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:35:17,877 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:35:17,877 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:35:51,317 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:35:51,317 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:35:51,317 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:35:51,317 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:36:24,648 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:36:24,648 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:36:24,654 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.513
+2025-07-08 19:36:24,654 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:36:24,654 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:36:24,654 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:36:24,712 - CrisisDetect+ - ERROR - Failed to analyze health: agg function failed [how->mean,dtype->object]
+2025-07-08 19:36:24,713 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:36:26,161 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:36:26,161 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:36:26,169 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:36:26,213 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:36:26,213 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:36:26,214 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:36:26,214 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:38:31,570 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:38:31,571 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:38:31,571 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:38:31,571 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:38:31,571 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:38:33,778 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:38:33,778 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:38:33,779 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:38:33,779 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:38:33,780 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:38:33,780 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:38:35,595 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:38:35,595 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:38:35,595 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:38:35,595 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:38:35,596 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:38:35,596 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:38:36,165 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:38:36,455 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:38:36,499 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:38:36,522 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:38:36,543 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:38:36,543 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:38:36,543 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:38:36,543 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:39:09,596 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:39:09,596 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:39:09,596 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:39:09,596 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:39:42,111 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:39:42,111 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:39:42,116 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.513
+2025-07-08 19:39:42,117 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:39:42,117 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:39:42,117 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:39:42,177 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 10 users
+2025-07-08 19:39:42,177 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 10 users
+2025-07-08 19:39:42,178 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 45 user pairs
+2025-07-08 19:39:42,178 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 45 user pairs
+2025-07-08 19:39:42,234 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 36 edges from 45 possible connections
+2025-07-08 19:39:42,234 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 36 edges from 45 possible connections
+2025-07-08 19:39:42,235 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 10 | Edges: 36 | Density: 0.800
+2025-07-08 19:39:42,235 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 10 | Edges: 36 | Density: 0.800
+2025-07-08 19:39:42,235 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 19:39:42,235 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 19:39:42,235 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:39:42,235 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:39:42,236 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:39:42,236 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:39:42,237 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:39:42,237 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:39:42,237 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:39:42,237 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:39:42,238 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:39:42,238 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:39:42,244 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:39:42,244 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:39:42,245 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 19:39:42,245 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 19:39:42,246 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:39:42,246 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:39:42,246 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.3000, Std: 0.1000, Max: 0.3333
+2025-07-08 19:39:42,246 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.3000, Std: 0.1000, Max: 0.3333
+2025-07-08 19:39:42,246 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.1000, Std: 0.0279, Max: 0.1111
+2025-07-08 19:39:42,246 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.1000, Std: 0.0279, Max: 0.1111
+2025-07-08 19:39:42,247 - CrisisDetect+ - ERROR - Failed to analyze health: CrisisSNAMetrics.detect_communities() missing 1 required positional argument: 'crisis_type'
+2025-07-08 19:39:42,248 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:39:43,653 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:39:43,654 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:39:43,662 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:39:43,708 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:39:43,709 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:39:43,709 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:39:43,709 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:40:38,940 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:40:38,940 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:40:38,940 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:40:38,940 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:41:28,524 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:41:28,525 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:41:28,525 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:41:28,525 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:41:28,525 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:41:30,549 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:41:30,549 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:41:30,550 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:41:30,550 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:41:30,550 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:41:30,550 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:41:32,286 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:41:32,286 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:41:32,287 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:41:32,288 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:41:32,288 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:41:32,288 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:41:32,870 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:41:33,163 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:41:33,201 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:41:33,221 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:41:33,240 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:41:33,240 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:41:33,241 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:41:33,241 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:42:07,390 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:42:07,390 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:42:07,390 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:42:07,390 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:42:40,975 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:42:40,975 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:42:40,981 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.513
+2025-07-08 19:42:40,981 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:42:40,981 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:42:40,981 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:42:41,040 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 10 users
+2025-07-08 19:42:41,040 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 10 users
+2025-07-08 19:42:41,042 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 45 user pairs
+2025-07-08 19:42:41,042 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 45 user pairs
+2025-07-08 19:42:41,076 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 36 edges from 45 possible connections
+2025-07-08 19:42:41,076 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 36 edges from 45 possible connections
+2025-07-08 19:42:41,077 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 10 | Edges: 36 | Density: 0.800
+2025-07-08 19:42:41,077 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 10 | Edges: 36 | Density: 0.800
+2025-07-08 19:42:41,077 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 19:42:41,077 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 19:42:41,078 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:42:41,078 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:42:41,078 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:42:41,078 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:42:41,079 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:42:41,079 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:42:41,080 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:42:41,080 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:42:41,081 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:42:41,081 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:42:41,082 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:42:41,082 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:42:41,083 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 19:42:41,083 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 19:42:41,084 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:42:41,084 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:42:41,084 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.3000, Std: 0.1000, Max: 0.3333
+2025-07-08 19:42:41,084 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.3000, Std: 0.1000, Max: 0.3333
+2025-07-08 19:42:41,085 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.1000, Std: 0.0279, Max: 0.1111
+2025-07-08 19:42:41,085 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.1000, Std: 0.0279, Max: 0.1111
+2025-07-08 19:42:41,085 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in health network
+2025-07-08 19:42:41,085 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in health network
+2025-07-08 19:42:41,106 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 2 communities with modularity 0.0000
+2025-07-08 19:42:41,106 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 2 communities with modularity 0.0000
+2025-07-08 19:42:41,106 - CrisisDetect+ - INFO - Network analysis completed - 10 nodes, 36 edges
+2025-07-08 19:42:41,106 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 19:42:41,107 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 19:42:41,107 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 19:42:41,109 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: DETECTED | Severity: 0.555 | Time: 2025-07-08T19:42:41.109744
+2025-07-08 19:42:41,109 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: DETECTED | Severity: 0.555 | Time: 2025-07-08T19:42:41.109744
+2025-07-08 19:42:41,110 - CrisisDetect+ - INFO - Crisis severity calculated: 0.555 (DETECTED)
+2025-07-08 19:42:41,110 - CrisisDetect+ - ERROR - Failed to analyze health: CrisisAlertEngine.process_crisis_results() takes 2 positional arguments but 4 were given
+2025-07-08 19:42:41,111 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:42:42,539 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:42:42,539 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:42:42,549 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:42:42,594 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:42:42,594 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:42:42,595 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:42:42,595 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:51:02,578 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:51:02,579 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:51:06,141 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:51:06,141 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 3 texts in batches of 32
+2025-07-08 19:51:06,213 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 3 texts
+2025-07-08 19:51:06,213 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:51:06,213 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:51:08,151 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:51:08,151 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 3 texts for emotion analysis
+2025-07-08 19:51:08,222 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 3 texts
+2025-07-08 19:51:08,267 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building test crisis network from 20 records
+2025-07-08 19:51:08,273 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 5 users
+2025-07-08 19:51:08,273 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (5) for network construction
+2025-07-08 19:51:08,273 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for test network
+2025-07-08 19:51:08,274 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 19:51:08,274 - CrisisTest - INFO - Loading sample data for health crisis...
+2025-07-08 19:51:08,850 - CrisisTest - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:51:09,156 - CrisisTest - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:51:09,218 - CrisisTest - INFO - Prepared 50 records for health testing
+2025-07-08 19:51:09,236 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 19:51:09,237 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No sentiment data available
+2025-07-08 19:51:09,237 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No emotion data available
+2025-07-08 19:51:09,238 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: SAFE | Severity: 0.060 | Time: 2025-07-08T19:51:09.238929
+2025-07-08 19:52:07,188 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 19:52:07,189 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:52:07,189 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 19:52:07,189 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:52:07,189 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:52:09,413 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:52:09,413 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 19:52:09,414 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:52:09,414 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 19:52:09,414 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:52:09,414 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:52:11,934 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:52:11,934 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 19:52:11,934 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 19:52:11,934 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 19:52:11,934 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 2500 records each
+2025-07-08 19:52:11,935 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 19:52:12,528 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 19:52:12,821 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 19:52:12,867 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 19:52:12,890 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:52:12,912 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 19:52:12,912 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:52:12,913 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:52:12,913 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:52:46,419 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:52:46,419 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:52:46,420 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:52:46,420 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:53:20,532 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:53:20,532 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:53:20,539 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.513
+2025-07-08 19:53:20,539 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:53:20,539 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:53:20,539 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 2500 records
+2025-07-08 19:53:20,621 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 10 users
+2025-07-08 19:53:20,621 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 10 users
+2025-07-08 19:53:20,622 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 45 user pairs
+2025-07-08 19:53:20,622 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 45 user pairs
+2025-07-08 19:53:20,657 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 36 edges from 45 possible connections
+2025-07-08 19:53:20,657 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 36 edges from 45 possible connections
+2025-07-08 19:53:20,658 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 10 | Edges: 36 | Density: 0.800
+2025-07-08 19:53:20,658 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 10 | Edges: 36 | Density: 0.800
+2025-07-08 19:53:20,658 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 19:53:20,658 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 19:53:20,658 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:53:20,658 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:53:20,659 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:53:20,659 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:53:20,659 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:53:20,659 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:53:20,660 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:53:20,660 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:53:20,660 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:53:20,660 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:53:20,662 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:53:20,662 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:53:20,662 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 19:53:20,662 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 19:53:20,663 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:53:20,663 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.8000, Std: 0.2667, Max: 0.8889
+2025-07-08 19:53:20,663 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.3000, Std: 0.1000, Max: 0.3333
+2025-07-08 19:53:20,663 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.3000, Std: 0.1000, Max: 0.3333
+2025-07-08 19:53:20,664 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.1000, Std: 0.0279, Max: 0.1111
+2025-07-08 19:53:20,664 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.1000, Std: 0.0279, Max: 0.1111
+2025-07-08 19:53:20,664 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in health network
+2025-07-08 19:53:20,664 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in health network
+2025-07-08 19:53:20,665 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 2 communities with modularity 0.0000
+2025-07-08 19:53:20,665 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 2 communities with modularity 0.0000
+2025-07-08 19:53:20,665 - CrisisDetect+ - INFO - Network analysis completed - 10 nodes, 36 edges
+2025-07-08 19:53:20,665 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 19:53:20,665 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 19:53:20,665 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 19:53:20,668 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: DETECTED | Severity: 0.555 | Time: 2025-07-08T19:53:20.668166
+2025-07-08 19:53:20,668 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: DETECTED | Severity: 0.555 | Time: 2025-07-08T19:53:20.668166
+2025-07-08 19:53:20,668 - CrisisDetect+ - INFO - Crisis severity calculated: 0.555 (DETECTED)
+2025-07-08 19:53:20,669 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 19:53:20,669 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 19:53:20,669 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 19:53:20,669 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 19:53:20,674 - CrisisDetect+ - INFO - Completed analysis for health
+2025-07-08 19:53:20,674 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 19:53:22,137 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 19:53:22,137 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 19:53:22,146 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:53:22,188 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 19:53:22,189 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:53:22,189 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:53:22,189 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:54:17,686 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:54:17,686 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:54:17,687 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:54:17,687 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:55:25,037 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:55:25,037 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:55:25,043 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.834
+2025-07-08 19:55:25,043 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:55:25,043 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 2500 records
+2025-07-08 19:55:25,043 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 2500 records
+2025-07-08 19:55:25,274 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 4 users
+2025-07-08 19:55:25,274 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 4 users
+2025-07-08 19:55:25,274 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (4) for network construction
+2025-07-08 19:55:25,274 - CrisisDetect+.GraphBuilder - WARNING - [WARNING] Insufficient users (4) for network construction
+2025-07-08 19:55:25,275 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for technological network
+2025-07-08 19:55:25,275 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for technological network
+2025-07-08 19:55:25,275 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 19:55:25,275 - CrisisDetect+.SNAMetrics - WARNING - [WARNING] Empty network - cannot calculate centralities
+2025-07-08 19:55:25,276 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in technological network
+2025-07-08 19:55:25,276 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in technological network
+2025-07-08 19:55:25,276 - CrisisDetect+ - INFO - Network analysis completed - 0 nodes, 0 edges
+2025-07-08 19:55:25,277 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 19:55:25,277 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for technological
+2025-07-08 19:55:25,277 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for technological
+2025-07-08 19:55:25,278 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 19:55:25,278 - CrisisDetect+.CrisisScoreCalculator - WARNING - [WARNING] No network data available
+2025-07-08 19:55:25,278 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [TECHNOLOGICAL] Severity calculated: DETECTED | Severity: 0.711 | Time: 2025-07-08T19:55:25.278842
+2025-07-08 19:55:25,278 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [TECHNOLOGICAL] Severity calculated: DETECTED | Severity: 0.711 | Time: 2025-07-08T19:55:25.278842
+2025-07-08 19:55:25,279 - CrisisDetect+ - INFO - Crisis severity calculated: 0.711 (DETECTED)
+2025-07-08 19:55:25,279 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 19:55:25,279 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 19:55:25,279 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 19:55:25,279 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 19:55:25,283 - CrisisDetect+ - INFO - Completed analysis for technological
+2025-07-08 19:55:25,283 - CrisisDetect+ - INFO - Loading data for political crisis...
+2025-07-08 19:55:25,437 - CrisisDetect+ - INFO - Loaded 82309 records from Capital -riots.csv
+2025-07-08 19:55:25,450 - CrisisDetect+ - WARNING - Failed to load hashtag_donaldtrump.csv: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+2025-07-08 19:55:25,450 - CrisisDetect+ - INFO - Combined dataset: 82309 total records
+2025-07-08 19:55:25,453 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:55:25,463 - CrisisDetect+ - INFO - Starting analysis for political crisis...
+2025-07-08 19:55:25,463 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:55:25,464 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:55:25,464 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:56:30,467 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:56:30,467 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:56:30,468 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:56:30,468 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:57:36,048 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:57:36,048 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 19:57:36,053 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.491
+2025-07-08 19:57:36,054 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 19:57:36,054 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 2500 records
+2025-07-08 19:57:36,054 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 2500 records
+2025-07-08 19:57:36,269 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 21 users
+2025-07-08 19:57:36,269 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 21 users
+2025-07-08 19:57:36,270 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 210 user pairs
+2025-07-08 19:57:36,270 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 210 user pairs
+2025-07-08 19:57:36,417 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 159 edges from 210 possible connections
+2025-07-08 19:57:36,417 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 159 edges from 210 possible connections
+2025-07-08 19:57:36,418 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [POLITICAL] | Nodes: 21 | Edges: 159 | Density: 0.757
+2025-07-08 19:57:36,418 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [POLITICAL] | Nodes: 21 | Edges: 159 | Density: 0.757
+2025-07-08 19:57:36,418 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for political network
+2025-07-08 19:57:36,418 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for political network
+2025-07-08 19:57:36,418 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:57:36,418 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 19:57:36,419 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:57:36,419 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 19:57:36,420 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:57:36,420 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 19:57:36,421 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:57:36,421 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 19:57:36,421 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:57:36,421 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 19:57:36,423 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [political] - Mean: 0.7571, Std: 0.2167, Max: 0.9500
+2025-07-08 19:57:36,423 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [political] - Mean: 0.7571, Std: 0.2167, Max: 0.9500
+2025-07-08 19:57:36,424 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [political] - Mean: 0.0078, Std: 0.0061, Max: 0.0192
+2025-07-08 19:57:36,424 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [political] - Mean: 0.0078, Std: 0.0061, Max: 0.0192
+2025-07-08 19:57:36,424 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [political] - Mean: 0.7884, Std: 0.1964, Max: 0.9500
+2025-07-08 19:57:36,424 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [political] - Mean: 0.7884, Std: 0.1964, Max: 0.9500
+2025-07-08 19:57:36,425 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [political] - Mean: 0.2095, Std: 0.0610, Max: 0.2529
+2025-07-08 19:57:36,425 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [political] - Mean: 0.2095, Std: 0.0610, Max: 0.2529
+2025-07-08 19:57:36,425 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [political] - Mean: 0.0476, Std: 0.0118, Max: 0.0569
+2025-07-08 19:57:36,425 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [political] - Mean: 0.0476, Std: 0.0118, Max: 0.0569
+2025-07-08 19:57:36,425 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in political network
+2025-07-08 19:57:36,425 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in political network
+2025-07-08 19:57:36,427 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.0459
+2025-07-08 19:57:36,427 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.0459
+2025-07-08 19:57:36,427 - CrisisDetect+ - INFO - Network analysis completed - 21 nodes, 159 edges
+2025-07-08 19:57:36,428 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 19:57:36,428 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for political
+2025-07-08 19:57:36,428 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for political
+2025-07-08 19:57:36,433 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [POLITICAL] Severity calculated: DETECTED | Severity: 0.549 | Time: 2025-07-08T19:57:36.433254
+2025-07-08 19:57:36,433 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [POLITICAL] Severity calculated: DETECTED | Severity: 0.549 | Time: 2025-07-08T19:57:36.433254
+2025-07-08 19:57:36,433 - CrisisDetect+ - INFO - Crisis severity calculated: 0.549 (DETECTED)
+2025-07-08 19:57:36,433 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 19:57:36,433 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 19:57:36,434 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 19:57:36,434 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 19:57:36,436 - CrisisDetect+ - INFO - Completed analysis for political
+2025-07-08 19:57:36,436 - CrisisDetect+ - INFO - Loading data for social crisis...
+2025-07-08 19:57:37,300 - CrisisDetect+ - INFO - Loaded 381016 records from IRAhandle_tweets_1.csv
+2025-07-08 19:57:37,301 - CrisisDetect+ - INFO - Combined dataset: 381016 total records
+2025-07-08 19:57:37,310 - CrisisDetect+ - INFO - Sampled 2500 records for analysis
+2025-07-08 19:57:37,332 - CrisisDetect+ - INFO - Starting analysis for social crisis...
+2025-07-08 19:57:37,332 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 19:57:37,333 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:57:37,333 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 2500 texts in batches of 32
+2025-07-08 19:58:49,989 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:58:49,989 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 2500 texts
+2025-07-08 19:58:49,990 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 19:58:49,990 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 2500 texts for emotion analysis
+2025-07-08 20:00:05,148 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 20:00:05,148 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 2500 texts
+2025-07-08 20:00:05,154 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.655
+2025-07-08 20:00:05,154 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 20:00:05,154 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 2500 records
+2025-07-08 20:00:05,154 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 2500 records
+2025-07-08 20:00:05,187 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 188 users
+2025-07-08 20:00:05,187 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 188 users
+2025-07-08 20:00:05,196 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 17578 user pairs
+2025-07-08 20:00:05,196 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 17578 user pairs
+2025-07-08 20:00:17,474 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 16586 edges from 17578 possible connections
+2025-07-08 20:00:17,474 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 16586 edges from 17578 possible connections
+2025-07-08 20:00:17,476 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [SOCIAL] | Nodes: 188 | Edges: 16586 | Density: 0.944
+2025-07-08 20:00:17,476 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [SOCIAL] | Nodes: 188 | Edges: 16586 | Density: 0.944
+2025-07-08 20:00:17,476 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for social network
+2025-07-08 20:00:17,476 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for social network
+2025-07-08 20:00:17,477 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 20:00:17,477 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 20:00:17,477 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 20:00:17,477 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 20:00:17,763 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 20:00:17,763 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 20:00:17,887 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 20:00:17,887 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 20:00:17,898 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 20:00:17,898 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 20:00:17,932 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [social] - Mean: 0.9436, Std: 0.1532, Max: 0.9733
+2025-07-08 20:00:17,932 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [social] - Mean: 0.9436, Std: 0.1532, Max: 0.9733
+2025-07-08 20:00:17,933 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [social] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 20:00:17,933 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [social] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 20:00:17,934 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [social] - Mean: 0.9438, Std: 0.1531, Max: 0.9733
+2025-07-08 20:00:17,934 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [social] - Mean: 0.9438, Std: 0.1531, Max: 0.9733
+2025-07-08 20:00:17,935 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [social] - Mean: 0.0719, Std: 0.0119, Max: 0.0742
+2025-07-08 20:00:17,935 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [social] - Mean: 0.0719, Std: 0.0119, Max: 0.0742
+2025-07-08 20:00:17,935 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [social] - Mean: 0.0053, Std: 0.0002, Max: 0.0055
+2025-07-08 20:00:17,935 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [social] - Mean: 0.0053, Std: 0.0002, Max: 0.0055
+2025-07-08 20:00:17,936 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in social network
+2025-07-08 20:00:17,936 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in social network
+2025-07-08 20:00:18,030 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 4 communities with modularity 0.0168
+2025-07-08 20:00:18,030 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 4 communities with modularity 0.0168
+2025-07-08 20:00:18,031 - CrisisDetect+ - INFO - Network analysis completed - 188 nodes, 16586 edges
+2025-07-08 20:00:18,031 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 20:00:18,031 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for social
+2025-07-08 20:00:18,031 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for social
+2025-07-08 20:00:20,923 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [SOCIAL] Severity calculated: DETECTED | Severity: 0.690 | Time: 2025-07-08T20:00:20.923241
+2025-07-08 20:00:20,923 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [SOCIAL] Severity calculated: DETECTED | Severity: 0.690 | Time: 2025-07-08T20:00:20.923241
+2025-07-08 20:00:20,923 - CrisisDetect+ - INFO - Crisis severity calculated: 0.690 (DETECTED)
+2025-07-08 20:00:20,923 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 20:00:20,923 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 20:00:20,924 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 20:00:20,924 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 20:00:20,927 - CrisisDetect+ - INFO - Completed analysis for social
+2025-07-08 20:00:20,960 - CrisisDetect+ - INFO - Results saved to results\outputs
+2025-07-08 20:00:20,960 - CrisisDetect+ - INFO - Main results: crisis_analysis_complete_20250708_200020.json
+2025-07-08 20:00:20,960 - CrisisDetect+ - INFO - Rankings: crisis_rankings_20250708_200020.csv
+2025-07-08 21:17:16,496 - CrisisDetect+ - INFO - Initializing CrisisDetect+ Analysis System...
+2025-07-08 21:17:16,496 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 21:17:16,496 - CrisisDetect+.SentimentClassifier - INFO - [CPU] Using CPU for sentiment analysis
+2025-07-08 21:17:16,497 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 21:17:16,497 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADING: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 21:17:19,720 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 21:17:19,720 - CrisisDetect+.SentimentClassifier - INFO - [MODEL] LOADED: distilbert-base-uncased-finetuned-sst-2-english
+2025-07-08 21:17:19,720 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 21:17:19,720 - CrisisDetect+.EmotionClassifier - INFO - [CPU] Using CPU for emotion analysis
+2025-07-08 21:17:19,721 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 21:17:19,721 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADING: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 21:17:21,797 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 21:17:21,797 - CrisisDetect+.EmotionClassifier - INFO - [MODEL] LOADED: j-hartmann/emotion-english-distilroberta-base
+2025-07-08 21:17:21,797 - CrisisDetect+ - INFO - All components initialized successfully!
+2025-07-08 21:17:21,798 - CrisisDetect+ - INFO - Starting complete crisis analysis...
+2025-07-08 21:17:21,798 - CrisisDetect+ - INFO - Analyzing 4 crisis types with 10000 records each
+2025-07-08 21:17:21,798 - CrisisDetect+ - INFO - Loading data for health crisis...
+2025-07-08 21:17:22,350 - CrisisDetect+ - INFO - Loaded 147475 records from Covid-19 Twitter Dataset (Apr-Jun 2021).csv
+2025-07-08 21:17:22,624 - CrisisDetect+ - INFO - Loaded 50000 records from covid19_tweets.csv
+2025-07-08 21:17:22,662 - CrisisDetect+ - INFO - Combined dataset: 197475 total records
+2025-07-08 21:17:22,693 - CrisisDetect+ - INFO - Sampled 10000 records for analysis
+2025-07-08 21:17:22,718 - CrisisDetect+ - INFO - Starting analysis for health crisis...
+2025-07-08 21:17:22,719 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 21:17:22,719 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:17:22,719 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:19:41,473 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:19:41,473 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:19:41,474 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:19:41,474 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:21:50,490 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:21:50,490 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:21:50,507 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: 0.524
+2025-07-08 21:21:50,507 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 21:21:50,507 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 10000 records
+2025-07-08 21:21:50,507 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building health crisis network from 10000 records
+2025-07-08 21:21:50,712 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 52 users
+2025-07-08 21:21:50,712 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 52 users
+2025-07-08 21:21:50,714 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 1326 user pairs
+2025-07-08 21:21:50,714 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 1326 user pairs
+2025-07-08 21:21:51,606 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 978 edges from 1326 possible connections
+2025-07-08 21:21:51,606 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 978 edges from 1326 possible connections
+2025-07-08 21:21:51,606 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 52 | Edges: 978 | Density: 0.738
+2025-07-08 21:21:51,606 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [HEALTH] | Nodes: 52 | Edges: 978 | Density: 0.738
+2025-07-08 21:21:51,606 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 21:21:51,606 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for health network
+2025-07-08 21:21:51,607 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:21:51,607 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:21:51,607 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:21:51,607 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:21:51,613 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:21:51,613 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:21:51,617 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:21:51,617 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:21:51,619 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:21:51,619 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:21:51,623 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.7376, Std: 0.2514, Max: 0.8627
+2025-07-08 21:21:51,623 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [health] - Mean: 0.7376, Std: 0.2514, Max: 0.8627
+2025-07-08 21:21:51,623 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0005, Std: 0.0003, Max: 0.0009
+2025-07-08 21:21:51,623 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [health] - Mean: 0.0005, Std: 0.0003, Max: 0.0009
+2025-07-08 21:21:51,624 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.7411, Std: 0.2495, Max: 0.8627
+2025-07-08 21:21:51,624 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [health] - Mean: 0.7411, Std: 0.2495, Max: 0.8627
+2025-07-08 21:21:51,625 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.1286, Std: 0.0518, Max: 0.1528
+2025-07-08 21:21:51,625 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [health] - Mean: 0.1286, Std: 0.0518, Max: 0.1528
+2025-07-08 21:21:51,625 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.0192, Std: 0.0015, Max: 0.0202
+2025-07-08 21:21:51,625 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [health] - Mean: 0.0192, Std: 0.0015, Max: 0.0202
+2025-07-08 21:21:51,625 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in health network
+2025-07-08 21:21:51,625 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in health network
+2025-07-08 21:21:51,632 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.0424
+2025-07-08 21:21:51,632 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.0424
+2025-07-08 21:21:51,633 - CrisisDetect+ - INFO - Network analysis completed - 52 nodes, 978 edges
+2025-07-08 21:21:51,633 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 21:21:51,633 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 21:21:51,633 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for health
+2025-07-08 21:21:51,678 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: DETECTED | Severity: 0.554 | Time: 2025-07-08T21:21:51.678790
+2025-07-08 21:21:51,678 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [HEALTH] Severity calculated: DETECTED | Severity: 0.554 | Time: 2025-07-08T21:21:51.678790
+2025-07-08 21:21:51,679 - CrisisDetect+ - INFO - Crisis severity calculated: 0.554 (DETECTED)
+2025-07-08 21:21:51,679 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:21:51,679 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:21:51,679 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:21:51,679 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:21:51,687 - CrisisDetect+ - INFO - Completed analysis for health
+2025-07-08 21:21:51,687 - CrisisDetect+ - INFO - Loading data for technological crisis...
+2025-07-08 21:21:53,082 - CrisisDetect+ - INFO - Loaded 304135 records from Facebook_outage_Tweet_data_4th_October.csv
+2025-07-08 21:21:53,083 - CrisisDetect+ - INFO - Combined dataset: 304135 total records
+2025-07-08 21:21:53,099 - CrisisDetect+ - INFO - Sampled 10000 records for analysis
+2025-07-08 21:21:53,161 - CrisisDetect+ - INFO - Starting analysis for technological crisis...
+2025-07-08 21:21:53,161 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 21:21:53,162 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:21:53,162 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:25:40,610 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:25:40,610 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:25:40,611 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:25:40,611 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:29:28,496 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:29:28,496 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:29:28,515 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.826
+2025-07-08 21:29:28,516 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 21:29:28,516 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 10000 records
+2025-07-08 21:29:28,516 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building technological crisis network from 10000 records
+2025-07-08 21:29:29,353 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 78 users
+2025-07-08 21:29:29,353 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 78 users
+2025-07-08 21:29:29,356 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 3003 user pairs
+2025-07-08 21:29:29,356 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 3003 user pairs
+2025-07-08 21:29:31,391 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 2650 edges from 3003 possible connections
+2025-07-08 21:29:31,391 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 2650 edges from 3003 possible connections
+2025-07-08 21:29:31,392 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [TECHNOLOGICAL] | Nodes: 78 | Edges: 2650 | Density: 0.882
+2025-07-08 21:29:31,392 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [TECHNOLOGICAL] | Nodes: 78 | Edges: 2650 | Density: 0.882
+2025-07-08 21:29:31,392 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for technological network
+2025-07-08 21:29:31,392 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for technological network
+2025-07-08 21:29:31,392 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:29:31,392 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:29:31,393 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:29:31,393 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:29:31,421 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:29:31,421 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:29:31,442 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:29:31,442 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:29:31,445 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:29:31,445 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:29:31,449 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [technological] - Mean: 0.8825, Std: 0.2012, Max: 0.9481
+2025-07-08 21:29:31,449 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [technological] - Mean: 0.8825, Std: 0.2012, Max: 0.9481
+2025-07-08 21:29:31,449 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [technological] - Mean: 0.0002, Std: 0.0001, Max: 0.0004
+2025-07-08 21:29:31,449 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [technological] - Mean: 0.0002, Std: 0.0001, Max: 0.0004
+2025-07-08 21:29:31,450 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [technological] - Mean: 0.8845, Std: 0.1999, Max: 0.9481
+2025-07-08 21:29:31,450 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [technological] - Mean: 0.8845, Std: 0.1999, Max: 0.9481
+2025-07-08 21:29:31,451 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [technological] - Mean: 0.1102, Std: 0.0262, Max: 0.1183
+2025-07-08 21:29:31,451 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [technological] - Mean: 0.1102, Std: 0.0262, Max: 0.1183
+2025-07-08 21:29:31,451 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [technological] - Mean: 0.0128, Std: 0.0009, Max: 0.0135
+2025-07-08 21:29:31,451 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [technological] - Mean: 0.0128, Std: 0.0009, Max: 0.0135
+2025-07-08 21:29:31,452 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in technological network
+2025-07-08 21:29:31,452 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in technological network
+2025-07-08 21:29:31,468 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.0227
+2025-07-08 21:29:31,468 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.0227
+2025-07-08 21:29:31,469 - CrisisDetect+ - INFO - Network analysis completed - 78 nodes, 2650 edges
+2025-07-08 21:29:31,469 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 21:29:31,469 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for technological
+2025-07-08 21:29:31,469 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for technological
+2025-07-08 21:29:31,660 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [TECHNOLOGICAL] Severity calculated: DETECTED | Severity: 0.805 | Time: 2025-07-08T21:29:31.660495
+2025-07-08 21:29:31,660 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [TECHNOLOGICAL] Severity calculated: DETECTED | Severity: 0.805 | Time: 2025-07-08T21:29:31.660495
+2025-07-08 21:29:31,661 - CrisisDetect+ - INFO - Crisis severity calculated: 0.805 (DETECTED)
+2025-07-08 21:29:31,661 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:29:31,661 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:29:31,661 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:29:31,661 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:29:31,670 - CrisisDetect+ - INFO - Completed analysis for technological
+2025-07-08 21:29:31,671 - CrisisDetect+ - INFO - Loading data for political crisis...
+2025-07-08 21:29:31,825 - CrisisDetect+ - INFO - Loaded 82309 records from Capital -riots.csv
+2025-07-08 21:29:31,838 - CrisisDetect+ - WARNING - Failed to load hashtag_donaldtrump.csv: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+2025-07-08 21:29:31,838 - CrisisDetect+ - INFO - Combined dataset: 82309 total records
+2025-07-08 21:29:31,843 - CrisisDetect+ - INFO - Sampled 10000 records for analysis
+2025-07-08 21:29:31,862 - CrisisDetect+ - INFO - Starting analysis for political crisis...
+2025-07-08 21:29:31,862 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 21:29:31,863 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:29:31,863 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:33:15,968 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:33:15,968 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:33:15,970 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:33:15,970 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:37:00,417 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:37:00,417 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:37:00,435 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.495
+2025-07-08 21:37:00,436 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 21:37:00,436 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 10000 records
+2025-07-08 21:37:00,436 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building political crisis network from 10000 records
+2025-07-08 21:37:01,235 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 209 users
+2025-07-08 21:37:01,235 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 209 users
+2025-07-08 21:37:01,241 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 21736 user pairs
+2025-07-08 21:37:01,241 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 21736 user pairs
+2025-07-08 21:37:15,725 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 13123 edges from 21736 possible connections
+2025-07-08 21:37:15,725 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 13123 edges from 21736 possible connections
+2025-07-08 21:37:15,726 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [POLITICAL] | Nodes: 209 | Edges: 13123 | Density: 0.604
+2025-07-08 21:37:15,726 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [POLITICAL] | Nodes: 209 | Edges: 13123 | Density: 0.604
+2025-07-08 21:37:15,727 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for political network
+2025-07-08 21:37:15,727 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for political network
+2025-07-08 21:37:15,727 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:37:15,727 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:37:15,728 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:37:15,728 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:37:16,038 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:37:16,038 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:37:16,161 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:37:16,161 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:37:16,183 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:37:16,183 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:37:16,197 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [political] - Mean: 0.6037, Std: 0.2315, Max: 0.7981
+2025-07-08 21:37:16,197 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [political] - Mean: 0.6037, Std: 0.2315, Max: 0.7981
+2025-07-08 21:37:16,198 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [political] - Mean: 0.0004, Std: 0.0002, Max: 0.0007
+2025-07-08 21:37:16,198 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [political] - Mean: 0.0004, Std: 0.0002, Max: 0.0007
+2025-07-08 21:37:16,198 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [political] - Mean: 0.6159, Std: 0.2281, Max: 0.7981
+2025-07-08 21:37:16,198 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [political] - Mean: 0.6159, Std: 0.2281, Max: 0.7981
+2025-07-08 21:37:16,199 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [political] - Mean: 0.0614, Std: 0.0319, Max: 0.0846
+2025-07-08 21:37:16,199 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [political] - Mean: 0.0614, Std: 0.0319, Max: 0.0846
+2025-07-08 21:37:16,200 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [political] - Mean: 0.0048, Std: 0.0006, Max: 0.0054
+2025-07-08 21:37:16,200 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [political] - Mean: 0.0048, Std: 0.0006, Max: 0.0054
+2025-07-08 21:37:16,200 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in political network
+2025-07-08 21:37:16,200 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in political network
+2025-07-08 21:37:16,288 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.1280
+2025-07-08 21:37:16,288 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 3 communities with modularity 0.1280
+2025-07-08 21:37:16,288 - CrisisDetect+ - INFO - Network analysis completed - 209 nodes, 13123 edges
+2025-07-08 21:37:16,289 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 21:37:16,289 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for political
+2025-07-08 21:37:16,289 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for political
+2025-07-08 21:37:18,284 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [POLITICAL] Severity calculated: DETECTED | Severity: 0.667 | Time: 2025-07-08T21:37:18.284485
+2025-07-08 21:37:18,284 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [POLITICAL] Severity calculated: DETECTED | Severity: 0.667 | Time: 2025-07-08T21:37:18.284485
+2025-07-08 21:37:18,285 - CrisisDetect+ - INFO - Crisis severity calculated: 0.667 (DETECTED)
+2025-07-08 21:37:18,285 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:37:18,285 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:37:18,285 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:37:18,285 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:37:18,293 - CrisisDetect+ - INFO - Completed analysis for political
+2025-07-08 21:37:18,293 - CrisisDetect+ - INFO - Loading data for social crisis...
+2025-07-08 21:37:19,148 - CrisisDetect+ - INFO - Loaded 381016 records from IRAhandle_tweets_1.csv
+2025-07-08 21:37:19,149 - CrisisDetect+ - INFO - Combined dataset: 381016 total records
+2025-07-08 21:37:19,161 - CrisisDetect+ - INFO - Sampled 10000 records for analysis
+2025-07-08 21:37:19,187 - CrisisDetect+ - INFO - Starting analysis for social crisis...
+2025-07-08 21:37:19,188 - CrisisDetect+ - INFO - Performing NLP analysis...
+2025-07-08 21:37:19,188 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:37:19,188 - CrisisDetect+.SentimentClassifier - INFO - [PROCESSING] Processing 10000 texts in batches of 32
+2025-07-08 21:41:24,927 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:41:24,927 - CrisisDetect+.SentimentClassifier - INFO - [OK] Completed sentiment analysis for 10000 texts
+2025-07-08 21:41:24,928 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:41:24,928 - CrisisDetect+.EmotionClassifier - INFO - [PROCESSING] Processing 10000 texts for emotion analysis
+2025-07-08 21:45:41,481 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:45:41,481 - CrisisDetect+.EmotionClassifier - INFO - [OK] Completed emotion analysis for 10000 texts
+2025-07-08 21:45:41,499 - CrisisDetect+ - INFO - NLP analysis completed - Avg sentiment: -0.662
+2025-07-08 21:45:41,499 - CrisisDetect+ - INFO - Building crisis network...
+2025-07-08 21:45:41,499 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 10000 records
+2025-07-08 21:45:41,499 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] Building social crisis network from 10000 records
+2025-07-08 21:45:41,535 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 269 users
+2025-07-08 21:45:41,535 - CrisisDetect+.GraphBuilder - INFO - [USERS] Prepared features for 269 users
+2025-07-08 21:45:41,542 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 36046 user pairs
+2025-07-08 21:45:41,542 - CrisisDetect+.GraphBuilder - INFO - [LINKS] Calculating similarities for 36046 user pairs
+2025-07-08 21:46:07,448 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 33749 edges from 36046 possible connections
+2025-07-08 21:46:07,448 - CrisisDetect+.GraphBuilder - INFO - [OK] Added 33749 edges from 36046 possible connections
+2025-07-08 21:46:07,449 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [SOCIAL] | Nodes: 269 | Edges: 33749 | Density: 0.936
+2025-07-08 21:46:07,449 - CrisisDetect+.GraphBuilder - INFO - [NETWORK] [SOCIAL] | Nodes: 269 | Edges: 33749 | Density: 0.936
+2025-07-08 21:46:07,450 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for social network
+2025-07-08 21:46:07,450 - CrisisDetect+.SNAMetrics - INFO - [DATA] Calculating centrality measures for social network
+2025-07-08 21:46:07,450 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:46:07,450 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating degree centrality
+2025-07-08 21:46:07,450 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:46:07,450 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating betweenness centrality
+2025-07-08 21:46:08,343 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:46:08,343 - CrisisDetect+.SNAMetrics - INFO - [UNICODE] Calculating closeness centrality
+2025-07-08 21:46:08,740 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:46:08,740 - CrisisDetect+.SNAMetrics - INFO - [TARGET] Calculating eigenvector centrality
+2025-07-08 21:46:08,765 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:46:08,765 - CrisisDetect+.SNAMetrics - INFO - [ANALYSIS] Calculating PageRank
+2025-07-08 21:46:08,793 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [social] - Mean: 0.9363, Std: 0.1608, Max: 0.9701
+2025-07-08 21:46:08,793 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] DEGREE [social] - Mean: 0.9363, Std: 0.1608, Max: 0.9701
+2025-07-08 21:46:08,793 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [social] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 21:46:08,793 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] BETWEENNESS [social] - Mean: 0.0000, Std: 0.0000, Max: 0.0000
+2025-07-08 21:46:08,794 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [social] - Mean: 0.9366, Std: 0.1606, Max: 0.9701
+2025-07-08 21:46:08,794 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] CLOSENESS [social] - Mean: 0.9366, Std: 0.1606, Max: 0.9701
+2025-07-08 21:46:08,795 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [social] - Mean: 0.0600, Std: 0.0106, Max: 0.0622
+2025-07-08 21:46:08,795 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] EIGENVECTOR [social] - Mean: 0.0600, Std: 0.0106, Max: 0.0622
+2025-07-08 21:46:08,796 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [social] - Mean: 0.0037, Std: 0.0002, Max: 0.0042
+2025-07-08 21:46:08,796 - CrisisDetect+.SNAMetrics - INFO - [PROGRESS] PAGERANK [social] - Mean: 0.0037, Std: 0.0002, Max: 0.0042
+2025-07-08 21:46:08,797 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in social network
+2025-07-08 21:46:08,797 - CrisisDetect+.SNAMetrics - INFO - [USERS] Detecting communities in social network
+2025-07-08 21:46:08,984 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 4 communities with modularity 0.0199
+2025-07-08 21:46:08,984 - CrisisDetect+.SNAMetrics - INFO - [USERS] Found 4 communities with modularity 0.0199
+2025-07-08 21:46:08,984 - CrisisDetect+ - INFO - Network analysis completed - 269 nodes, 33749 edges
+2025-07-08 21:46:08,984 - CrisisDetect+ - INFO - Calculating crisis severity...
+2025-07-08 21:46:08,985 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for social
+2025-07-08 21:46:08,985 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] Calculating crisis severity for social
+2025-07-08 21:46:17,901 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [SOCIAL] Severity calculated: DETECTED | Severity: 0.734 | Time: 2025-07-08T21:46:17.901838
+2025-07-08 21:46:17,901 - CrisisDetect+.CrisisScoreCalculator - INFO - [CRISIS] [SOCIAL] Severity calculated: DETECTED | Severity: 0.734 | Time: 2025-07-08T21:46:17.901838
+2025-07-08 21:46:17,902 - CrisisDetect+ - INFO - Crisis severity calculated: 0.734 (DETECTED)
+2025-07-08 21:46:17,902 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:46:17,902 - CrisisDetect+.AlertEngine - INFO - [CRISIS] Processing crisis results for alerts
+2025-07-08 21:46:17,903 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:46:17,903 - CrisisDetect+.AlertEngine - INFO - [ALERT] Generated 0 new alerts
+2025-07-08 21:46:17,910 - CrisisDetect+ - INFO - Completed analysis for social
+2025-07-08 21:46:17,933 - CrisisDetect+ - INFO - Results saved to results\outputs
+2025-07-08 21:46:17,933 - CrisisDetect+ - INFO - Main results: crisis_analysis_complete_20250708_214617.json
+2025-07-08 21:46:17,934 - CrisisDetect+ - INFO - Rankings: crisis_rankings_20250708_214617.csv

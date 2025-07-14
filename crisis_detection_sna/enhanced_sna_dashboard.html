@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisisDetect+ Enhanced SNA Dashboard - Real Data Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .stats-summary {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e53e3e;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .crisis-tabs {
+            display: flex;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .tab-button:hover:not(.active) {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        .severity-badge {
+            background: #e53e3e;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .crisis-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .crisis-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .crisis-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        }
+        
+        .crisis-title {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .crisis-icon {
+            font-size: 32px;
+        }
+        
+        .crisis-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .crisis-stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .crisis-stat-value {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .crisis-stat-label {
+            font-size: 11px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        
+        .card-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .network-container {
+            width: 100%;
+            height: 450px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f8fafc;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 11px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+        
+        .influencer-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .influencer-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+            transition: background-color 0.3s ease;
+        }
+        
+        .influencer-item:hover {
+            background-color: #f7fafc;
+            border-radius: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .influencer-rank {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .influencer-name {
+            flex: 1;
+            margin-left: 15px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .influencer-score {
+            background: #f7fafc;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin-right: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .comparison-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a5568;
+            margin-bottom: 25px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .data-status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #48bb78;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .data-status.loading {
+            background: #ed8936;
+        }
+        
+        .data-status.error {
+            background: #e53e3e;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🚨</div>
+                CrisisDetect+ Enhanced SNA Dashboard
+            </div>
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-records">40,000</div>
+                    <div class="stat-label">Total Records</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="unique-users">22,364</div>
+                    <div class="stat-label">Unique Users</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="crises-detected">4/4</div>
+                    <div class="stat-label">Crises Detected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="avg-severity">0.690</div>
+                    <div class="stat-label">Avg Severity</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="crisis-tabs">
+            <button class="tab-button active" onclick="showCrisis('health')" id="health-tab">
+                🏥 Health Crisis
+                <span class="severity-badge">0.554</span>
+            </button>
+            <button class="tab-button" onclick="showCrisis('technological')" id="technological-tab">
+                💻 Technological Crisis
+                <span class="severity-badge">0.805</span>
+            </button>
+            <button class="tab-button" onclick="showCrisis('political')" id="political-tab">
+                🏛️ Political Crisis
+                <span class="severity-badge">0.667</span>
+            </button>
+            <button class="tab-button" onclick="showCrisis('social')" id="social-tab">
+                👥 Social Crisis
+                <span class="severity-badge">0.734</span>
+            </button>
+        </div>
+
+        <!-- Dynamic Crisis Content Will Be Generated Here -->
+        <div id="crisis-content-container"></div>
+        
+        <!-- Global Comparison Section -->
+        <div class="comparison-section">
+            <div class="comparison-title">
+                ⚖️ Cross-Crisis Comparative Analysis
+            </div>
+            <div id="global-comparison-chart" class="chart-container"></div>
+        </div>
+    </div>
+
+    <script src="load_real_data.js"></script>
+    <script>
+        // Global variables
+        let realCrisisData = null;
+        let processedNetworks = null;
+        let currentCrisis = 'health';
+        
+        // Crisis metadata
+        const crisisMetadata = {
+            health: { icon: '🏥', name: 'Health Crisis', color: '#e53e3e' },
+            technological: { icon: '💻', name: 'Technological Crisis', color: '#667eea' },
+            political: { icon: '🏛️', name: 'Political Crisis', color: '#764ba2' },
+            social: { icon: '👥', name: 'Social Crisis', color: '#f093fb' }
+        };
+        
+        // Initialize dashboard
+        async function initializeDashboard() {
+            try {
+                // Show loading status
+                updateDataStatus('loading', 'Loading real data...');
+                
+                // Load real crisis data
+                realCrisisData = await loadRealCrisisData();
+                
+                if (realCrisisData) {
+                    // Process network data
+                    processedNetworks = processNetworkData(realCrisisData);
+                    
+                    // Update header stats
+                    updateHeaderStats();
+                    
+                    // Generate crisis content
+                    generateCrisisContent();
+                    
+                    // Show initial crisis
+                    showCrisis('health');
+                    
+                    // Create global comparison
+                    createGlobalComparison();
+                    
+                    updateDataStatus('success', 'Real data loaded');
+                } else {
+                    throw new Error('Failed to load real data');
+                }
+                
+            } catch (error) {
+                console.error('Dashboard initialization error:', error);
+                updateDataStatus('error', 'Using sample data');
+                initializeSampleDashboard();
+            }
+        }
+        
+        function updateDataStatus(status, message) {
+            const statusElements = document.querySelectorAll('.data-status');
+            statusElements.forEach(el => {
+                el.className = `data-status ${status}`;
+                el.textContent = message;
+            });
+        }
+        
+        function updateHeaderStats() {
+            if (!realCrisisData) return;
+            
+            const summary = realCrisisData.summary;
+            document.getElementById('total-records').textContent = summary.total_data_points.toLocaleString();
+            document.getElementById('unique-users').textContent = summary.total_unique_users.toLocaleString();
+            document.getElementById('crises-detected').textContent = `${summary.crises_detected}/${summary.total_crises_analyzed}`;
+            document.getElementById('avg-severity').textContent = summary.avg_severity_score.toFixed(3);
+        }
+        
+        function generateCrisisContent() {
+            const container = document.getElementById('crisis-content-container');
+
+            Object.keys(crisisMetadata).forEach(crisisType => {
+                const crisis = realCrisisData.detailed[crisisType];
+                const metadata = crisisMetadata[crisisType];
+                const networkData = processedNetworks[crisisType];
+
+                const stats = crisis.network_results.basic_stats;
+                const severity = realCrisisData.rankings.find(r => r.crisis_type === crisisType);
+
+                const contentHTML = `
+                    <div id="${crisisType}-content" class="crisis-content">
+                        <div class="crisis-header">
+                            <div class="crisis-title">
+                                <span class="crisis-icon">${metadata.icon}</span>
+                                ${metadata.name}
+                            </div>
+                            <div class="crisis-stats">
+                                <div class="crisis-stat">
+                                    <div class="crisis-stat-value">${severity.severity_score.toFixed(3)}</div>
+                                    <div class="crisis-stat-label">Severity Score</div>
+                                </div>
+                                <div class="crisis-stat">
+                                    <div class="crisis-stat-value">10,000</div>
+                                    <div class="crisis-stat-label">Records</div>
+                                </div>
+                                <div class="crisis-stat">
+                                    <div class="crisis-stat-value">${crisis.data_summary.unique_users.toLocaleString()}</div>
+                                    <div class="crisis-stat-label">Users</div>
+                                </div>
+                                <div class="crisis-stat">
+                                    <div class="crisis-stat-value">${stats.nodes}</div>
+                                    <div class="crisis-stat-label">Network Nodes</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <div class="card-title">
+                                    <div class="card-icon">🕸️</div>
+                                    Interactive Network Visualization
+                                </div>
+                                <div class="data-status loading">Loading...</div>
+                                <div id="${crisisType}-network" class="network-container"></div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-title">
+                                    <div class="card-icon">📊</div>
+                                    Network Metrics & Statistics
+                                </div>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value">${stats.nodes}</div>
+                                        <div class="metric-label">Nodes</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">${stats.edges}</div>
+                                        <div class="metric-label">Edges</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">${stats.density.toFixed(3)}</div>
+                                        <div class="metric-label">Density</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">${crisis.network_results.communities.num_communities}</div>
+                                        <div class="metric-label">Communities</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-title">
+                                    <div class="card-icon">👑</div>
+                                    Top Influencers (Degree Centrality)
+                                </div>
+                                <div id="${crisisType}-influencers" class="influencer-list"></div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-title">
+                                    <div class="card-icon">🎯</div>
+                                    Community Detection Analysis
+                                </div>
+                                <div id="${crisisType}-communities" class="chart-container"></div>
+                            </div>
+
+                            <div class="dashboard-card full-width">
+                                <div class="card-title">
+                                    <div class="card-icon">📈</div>
+                                    Multi-Centrality Measures Comparison
+                                </div>
+                                <div id="${crisisType}-centrality-chart" class="chart-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                container.insertAdjacentHTML('beforeend', contentHTML);
+            });
+        }
+
+        function showCrisis(crisisType) {
+            // Update tab buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`${crisisType}-tab`).classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.crisis-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`${crisisType}-content`).classList.add('active');
+
+            currentCrisis = crisisType;
+
+            // Load crisis-specific visualizations
+            setTimeout(() => {
+                loadCrisisVisualizations(crisisType);
+            }, 100);
+        }
+
+        function loadCrisisVisualizations(crisisType) {
+            if (!processedNetworks || !processedNetworks[crisisType]) return;
+
+            const networkData = processedNetworks[crisisType];
+
+            // Create real data visualizations
+            createRealNetworkVisualization(`${crisisType}-network`, networkData);
+            createRealInfluencersList(`${crisisType}-influencers`, networkData);
+            createRealCommunityVisualization(`${crisisType}-communities`, networkData);
+            createRealCentralityChart(`${crisisType}-centrality-chart`, networkData);
+        }
+
+        function createGlobalComparison() {
+            if (!realCrisisData) return;
+
+            const rankings = realCrisisData.rankings;
+            const detailed = realCrisisData.detailed;
+
+            // Prepare data for comparison
+            const comparisonData = rankings.map(ranking => {
+                const crisis = detailed[ranking.crisis_type];
+                return {
+                    crisis: crisisMetadata[ranking.crisis_type].name,
+                    severity: ranking.severity_score,
+                    users: crisis.data_summary.unique_users,
+                    nodes: crisis.network_results.basic_stats.nodes,
+                    edges: crisis.network_results.basic_stats.edges,
+                    density: crisis.network_results.basic_stats.density,
+                    communities: crisis.network_results.communities.num_communities,
+                    modularity: crisis.network_results.communities.modularity,
+                    color: crisisMetadata[ranking.crisis_type].color
+                };
+            });
+
+            // Create multi-metric comparison chart
+            const trace1 = {
+                x: comparisonData.map(d => d.crisis),
+                y: comparisonData.map(d => d.severity),
+                name: 'Severity Score',
+                type: 'bar',
+                marker: {
+                    color: comparisonData.map(d => d.color),
+                    line: { color: '#fff', width: 2 }
+                },
+                yaxis: 'y',
+                hovertemplate: '<b>%{x}</b><br>Severity: %{y:.3f}<extra></extra>'
+            };
+
+            const trace2 = {
+                x: comparisonData.map(d => d.crisis),
+                y: comparisonData.map(d => d.users),
+                name: 'Unique Users',
+                type: 'scatter',
+                mode: 'lines+markers',
+                marker: { color: '#667eea', size: 10, line: { color: '#fff', width: 2 } },
+                line: { color: '#667eea', width: 3 },
+                yaxis: 'y2',
+                hovertemplate: '<b>%{x}</b><br>Users: %{y:,}<extra></extra>'
+            };
+
+            const trace3 = {
+                x: comparisonData.map(d => d.crisis),
+                y: comparisonData.map(d => d.density),
+                name: 'Network Density',
+                type: 'scatter',
+                mode: 'lines+markers',
+                marker: { color: '#f093fb', size: 10, line: { color: '#fff', width: 2 } },
+                line: { color: '#f093fb', width: 3 },
+                yaxis: 'y3',
+                hovertemplate: '<b>%{x}</b><br>Density: %{y:.3f}<extra></extra>'
+            };
+
+            const layout = {
+                title: {
+                    text: 'Comprehensive Crisis Analysis: Severity vs Network Characteristics',
+                    font: { size: 18, color: '#4a5568' }
+                },
+                xaxis: {
+                    title: 'Crisis Type',
+                    titlefont: { size: 14 },
+                    tickfont: { size: 12 }
+                },
+                yaxis: {
+                    title: 'Severity Score',
+                    side: 'left',
+                    range: [0, 1],
+                    titlefont: { color: '#e53e3e', size: 14 },
+                    tickfont: { color: '#e53e3e' }
+                },
+                yaxis2: {
+                    title: 'Unique Users',
+                    side: 'right',
+                    overlaying: 'y',
+                    titlefont: { color: '#667eea', size: 14 },
+                    tickfont: { color: '#667eea' }
+                },
+                yaxis3: {
+                    title: 'Network Density',
+                    side: 'right',
+                    overlaying: 'y',
+                    position: 0.95,
+                    titlefont: { color: '#f093fb', size: 14 },
+                    tickfont: { color: '#f093fb' }
+                },
+                margin: { t: 80, b: 80, l: 80, r: 120 },
+                height: 400,
+                showlegend: true,
+                legend: {
+                    orientation: 'h',
+                    y: -0.15,
+                    x: 0.5,
+                    xanchor: 'center'
+                },
+                hovermode: 'x unified'
+            };
+
+            Plotly.newPlot('global-comparison-chart', [trace1, trace2, trace3], layout, {
+                responsive: true,
+                displayModeBar: false
+            });
+        }
+
+        function initializeSampleDashboard() {
+            // Fallback to sample data if real data fails to load
+            console.log('Initializing with sample data...');
+
+            // Generate sample content similar to real data structure
+            generateSampleContent();
+            showCrisis('health');
+        }
+
+        function generateSampleContent() {
+            // Implementation for sample data fallback
+            const container = document.getElementById('crisis-content-container');
+            container.innerHTML = '<div class="loading"><div class="spinner"></div>Sample data mode - Real data unavailable</div>';
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initializeDashboard);
+    </script>
+</body>
+</html>

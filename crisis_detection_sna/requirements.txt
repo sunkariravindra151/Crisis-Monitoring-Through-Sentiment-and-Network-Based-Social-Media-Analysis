@@ -1,0 +1,38 @@
+# CrisisDetect+ Requirements
+# Core Dependencies
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+
+# NLP & Transformers
+transformers>=4.21.0
+torch>=1.12.0
+tokenizers>=0.13.0
+datasets>=2.5.0
+
+# Network Analysis
+networkx>=2.8.0
+python-louvain>=0.16
+community>=0.13.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.11.0
+
+# Data Processing
+scipy>=1.9.0
+nltk>=3.8.0
+
+# Async & Streaming
+asyncio
+aiofiles>=0.8.0
+
+# Utilities
+tqdm>=4.64.0
+python-dateutil>=2.8.0
+pytz>=2022.6
+
+# Development
+jupyter>=1.0.0
+ipykernel>=6.16.0

@@ -1,0 +1,378 @@
+{
+  "health_crisis": {
+    "Covid-19 Twitter Dataset (Apr-Jun 2021).csv": {
+      "status": "success",
+      "filepath": "data/raw/health_crises\\Covid-19 Twitter Dataset (Apr-Jun 2021).csv",
+      "total_records": 147475,
+      "total_columns": 17,
+      "columns": [
+        "id",
+        "created_at",
+        "source",
+        "original_text",
+        "lang",
+        "favorite_count",
+        "retweet_count",
+        "original_author",
+        "hashtags",
+        "user_mentions",
+        "place",
+        "clean_tweet",
+        "compound",
+        "neg",
+        "neu",
+        "pos",
+        "sentiment"
+      ],
+      "config": {
+        "text_column": "clean_tweet",
+        "user_column": "original_author",
+        "timestamp_column": "created_at",
+        "id_column": "id",
+        "additional_columns": {
+          "original_text": "original_text",
+          "retweet_count": "retweet_count",
+          "favorite_count": "favorite_count",
+          "hashtags": "hashtags",
+          "compound": "compound",
+          "sentiment": "sentiment"
+        },
+        "sample_size": 10000,
+        "description": "COVID-19 tweets with sentiment analysis"
+      },
+      "description": "COVID-19 tweets with sentiment analysis",
+      "missing_columns": [],
+      "column_mapping_valid": true,
+      "text_analysis": {
+        "non_null_count": 146527,
+        "null_count": "948",
+        "avg_length": 59.71549270782859,
+        "sample_texts": [
+          " work close indian govern rapidli deploy addit support suppli alarm covid19",
+          "flip flop fauci admit outdoor covid19 transmiss low",
+          "hi twitter tim man white hous covid19 suppli coordin lot confus around use"
+        ]
+      },
+      "timestamp_analysis": {
+        "valid_timestamps": "147475",
+        "invalid_timestamps": "0",
+        "date_range": {
+          "start": "2021-04-26T00:00:00",
+          "end": "2021-06-27T00:00:00"
+        }
+      },
+      "user_analysis": {
+        "unique_users": 110597,
+        "total_user_entries": 147474,
+        "null_users": "1"
+      },
+      "recommended_sample_size": 10000
+    }
+  },
+  "natural_disaster": {
+    "Hurricane_Harvey.csv": {
+      "status": "error",
+      "filepath": "data/raw/natural_disasters\\Hurricane_Harvey.csv",
+      "error": "'utf-8' codec can't decode byte 0xa0 in position 380: invalid start byte"
+    },
+    "DisasterTweets.csv": {
+      "status": "success",
+      "filepath": "data/raw/natural_disasters\\DisasterTweets.csv",
+      "total_records": 2559,
+      "total_columns": 13,
+      "columns": [
+        "Name",
+        "UserName",
+        "Timestamp",
+        "Verified",
+        "Tweets",
+        "Comments",
+        "Retweets",
+        "Likes",
+        "Impressions",
+        "Tags",
+        "Tweet Link",
+        "Tweet ID",
+        "Disaster"
+      ],
+      "config": {
+        "text_column": "Tweets",
+        "user_column": "UserName",
+        "timestamp_column": "Timestamp",
+        "id_column": "Tweet ID",
+        "additional_columns": {
+          "name": "Name",
+          "verified": "Verified",
+          "comments": "Comments",
+          "retweets": "Retweets",
+          "likes": "Likes",
+          "disaster_type": "Disaster"
+        },
+        "sample_size": 5000,
+        "description": "General disaster tweets"
+      },
+      "description": "General disaster tweets",
+      "missing_columns": [],
+      "column_mapping_valid": true,
+      "text_analysis": {
+        "non_null_count": 2559,
+        "null_count": "0",
+        "avg_length": 186.926143024619,
+        "sample_texts": [
+          "US Drought Monitor 2-29-24\n\nHappy Leap Day! For the 50 states and Puerto Rico, the US Drought Monitor shows 18.09% in moderate drought or worse, compared to 16.62% last week.#droughtmonitor #drought #drought2024 #climate #science #data #maps #UnitedStates #USA #US",
+          " Synonym is #Drought",
+          "Across South America in the last two months, #floods and #landslides in Bolivia and Ecuador, and #drought and #wildfires in Chile and Colombia are ongoing signs of the #ClimateCrisis"
+        ]
+      },
+      "timestamp_analysis": {
+        "valid_timestamps": "2559",
+        "invalid_timestamps": "0",
+        "date_range": {
+          "start": "2024-02-23T16:32:26+00:00",
+          "end": "2024-03-04T11:40:05+00:00"
+        }
+      },
+      "user_analysis": {
+        "unique_users": 1053,
+        "total_user_entries": 2559,
+        "null_users": "0"
+      },
+      "recommended_sample_size": 2559
+    }
+  },
+  "political_crisis": {
+    "Capital -riots.csv": {
+      "status": "success",
+      "filepath": "data/raw/political_crises\\Capital -riots.csv",
+      "total_records": 82309,
+      "total_columns": 14,
+      "columns": [
+        "tweet_id",
+        "text",
+        "query",
+        "user_id",
+        "user_name",
+        "follower_count",
+        "user_tweet_count",
+        "likes",
+        "retweets",
+        "location_name",
+        "latitude",
+        "longitude",
+        "user_location",
+        "date"
+      ],
+      "config": {
+        "text_column": "text",
+        "user_column": "user_name",
+        "timestamp_column": "date",
+        "id_column": "tweet_id",
+        "additional_columns": {
+          "user_id": "user_id",
+          "follower_count": "follower_count",
+          "likes": "likes",
+          "retweets": "retweets",
+          "location": "location_name"
+        },
+        "sample_size": 5000,
+        "description": "Capitol riots January 6th tweets"
+      },
+      "description": "Capitol riots January 6th tweets",
+      "missing_columns": [],
+      "column_mapping_valid": true,
+      "text_analysis": {
+        "non_null_count": 82308,
+        "null_count": "1",
+        "avg_length": 164.86103416435827,
+        "sample_texts": [
+          "we can adjust by population to get crude excess death rates 2020 will also be the highest since 1940 even with measures taken to limit covid spread 2020 will still top 1951 the year of a major flu epidemic without all our efforts 2020 could have been much worse 911",
+          "turning to labour or remainers like what would you do different while sat on one of the worst economic recessions amp death rates in the g7 its like driving a car off a cliff amp while youre falling offering the wheel to the guy in the passenger seat go on you fix it",
+          "numbers of deaths are affected by population size we can also consider death rates as a proportion of the population crude death rates are shown below all improvements in the first decade of this century will be reversed this year spanish flu did the same in 1918 611"
+        ]
+      },
+      "timestamp_analysis": {
+        "valid_timestamps": "82309",
+        "invalid_timestamps": "0",
+        "date_range": {
+          "start": "2021-01-06T00:00:00",
+          "end": "2021-01-06T00:00:00"
+        }
+      },
+      "user_analysis": {
+        "unique_users": 2071,
+        "total_user_entries": 2478,
+        "null_users": "79831"
+      },
+      "recommended_sample_size": 5000
+    },
+    "hashtag_donaldtrump.csv": {
+      "status": "error",
+      "filepath": "data/raw/political_crises\\hashtag_donaldtrump.csv",
+      "error": "Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.\n"
+    }
+  },
+  "economic_crisis": {
+    "Bitcoin_tweets_dataset_2.csv": {
+      "status": "error",
+      "filepath": "data/raw/economic_crises\\Bitcoin_tweets_dataset_2.csv",
+      "error": "Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.\n"
+    }
+  },
+  "social_crisis": {
+    "IRAhandle_tweets_1.csv": {
+      "status": "success",
+      "filepath": "data/raw/social_crises\\IRAhandle_tweets_1.csv",
+      "total_records": 381016,
+      "total_columns": 15,
+      "columns": [
+        "external_author_id",
+        "author",
+        "content",
+        "region",
+        "language",
+        "publish_date",
+        "harvested_date",
+        "following",
+        "followers",
+        "updates",
+        "post_type",
+        "account_type",
+        "new_june_2018",
+        "retweet",
+        "account_category"
+      ],
+      "config": {
+        "text_column": "content",
+        "user_column": "author",
+        "timestamp_column": "publish_date",
+        "id_column": "external_author_id",
+        "additional_columns": {
+          "region": "region",
+          "language": "language",
+          "following": "following",
+          "followers": "followers",
+          "account_type": "account_type",
+          "account_category": "account_category"
+        },
+        "sample_size": 5000,
+        "description": "IRA social manipulation tweets"
+      },
+      "description": "IRA social manipulation tweets",
+      "missing_columns": [],
+      "column_mapping_valid": true,
+      "text_analysis": {
+        "non_null_count": 381016,
+        "null_count": "0",
+        "avg_length": 102.84056837508136,
+        "sample_texts": [
+          "\"We have a sitting Democrat US Senator on trial for corruption and you've barely heard a peep from the mainstream media.\" ~ @nedryun https://t.co/gh6g0D1oiC",
+          "Marshawn Lynch arrives to game in anti-Trump shirt. Judging by his sagging pants the shirt should say Lynch vs. belt https://t.co/mLH1i30LZZ",
+          "Daughter of fallen Navy Sailor delivers powerful monologue on anthem protests, burns her NFL packers gear.  #BoycottNFL https://t.co/qDlFBGMeag"
+        ]
+      },
+      "timestamp_analysis": {
+        "valid_timestamps": "381016",
+        "invalid_timestamps": "0",
+        "date_range": {
+          "start": "2012-10-30T12:27:00",
+          "end": "2018-05-27T12:54:00"
+        }
+      },
+      "user_analysis": {
+        "unique_users": 418,
+        "total_user_entries": 381016,
+        "null_users": "0"
+      },
+      "recommended_sample_size": 5000
+    }
+  },
+  "technological_crisis": {
+    "Facebook_outage_Tweet_data_4th_October.csv": {
+      "status": "success",
+      "filepath": "data/raw/technological_crises\\Facebook_outage_Tweet_data_4th_October.csv",
+      "total_records": 304135,
+      "total_columns": 36,
+      "columns": [
+        "id",
+        "conversation_id",
+        "created_at",
+        "date",
+        "time",
+        "timezone",
+        "user_id",
+        "username",
+        "name",
+        "place",
+        "tweet",
+        "language",
+        "mentions",
+        "urls",
+        "photos",
+        "replies_count",
+        "retweets_count",
+        "likes_count",
+        "hashtags",
+        "cashtags",
+        "link",
+        "retweet",
+        "quote_url",
+        "video",
+        "thumbnail",
+        "near",
+        "geo",
+        "source",
+        "user_rt_id",
+        "user_rt",
+        "retweet_id",
+        "reply_to",
+        "retweet_date",
+        "translate",
+        "trans_src",
+        "trans_dest"
+      ],
+      "config": {
+        "text_column": "tweet",
+        "user_column": "username",
+        "timestamp_column": "created_at",
+        "id_column": "id",
+        "additional_columns": {
+          "user_id": "user_id",
+          "name": "name",
+          "replies_count": "replies_count",
+          "retweets_count": "retweets_count",
+          "likes_count": "likes_count",
+          "hashtags": "hashtags"
+        },
+        "sample_size": 5000,
+        "description": "Facebook outage October 4th tweets"
+      },
+      "description": "Facebook outage October 4th tweets",
+      "missing_columns": [],
+      "column_mapping_valid": true,
+      "text_analysis": {
+        "non_null_count": 304135,
+        "null_count": "0",
+        "avg_length": 109.22981899485426,
+        "sample_texts": [
+          "#Facebook  seems like a bgp routing update withdrawal from the internet.....where is the backup configuration:D",
+          "Tsss una hora antes de salir vuelve Facebook e Instagram, as\u00ed qu\u00e9 chiste.  https://t.co/z9kclEfKT8",
+          "@tcsnoticias Sobrevimos a 30 a\u00f1os de arena y fmln y no vamos a sobrevivir 6 o mas horas sin WhatsApp y Facebook..\ud83d\ude01\ud83d\ude01\ud83d\ude04\ud83d\ude04\ud83e\udd23\ud83e\udd23\ud83e\udd23\ud83e\udd23"
+        ]
+      },
+      "timestamp_analysis": {
+        "valid_timestamps": "304135",
+        "invalid_timestamps": "0",
+        "date_range": {
+          "start": "2021-10-04T20:41:03+00:00",
+          "end": "2021-10-04T21:49:59+00:00"
+        }
+      },
+      "user_analysis": {
+        "unique_users": 262506,
+        "total_user_entries": 304135,
+        "null_users": "0"
+      },
+      "recommended_sample_size": 5000
+    }
+  }
+}

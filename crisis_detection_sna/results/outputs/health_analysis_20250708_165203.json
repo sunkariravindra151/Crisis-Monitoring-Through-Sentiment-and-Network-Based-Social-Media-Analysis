@@ -1,0 +1,96 @@
+[
+  {
+    "crisis_type": "health",
+    "analysis_timestamp": "2025-07-08T16:51:03.202563",
+    "data_summary": {
+      "total_records": 100,
+      "unique_users": 100,
+      "time_span_hours": 816.0
+    },
+    "nlp_results": {
+      "sentiment": {
+        "mean": -0.6732204735742994,
+        "std": 0.592997199827563,
+        "negative_ratio": 0.85,
+        "positive_ratio": 0.13
+      },
+      "emotion": {
+        "mean_crisis_intensity": 0.05568996798046144,
+        "std_crisis_intensity": 0.06593256809439693,
+        "high_intensity_ratio": 0.0
+      },
+      "emotion_distribution": {
+        "neutral": 0.69,
+        "joy": 0.09,
+        "fear": 0.09,
+        "sadness": 0.07,
+        "surprise": 0.04,
+        "anger": 0.02
+      }
+    },
+    "network_results": {
+      "error": "Empty network"
+    },
+    "crisis_detection": {
+      "crisis_type": "health",
+      "severity_score": 0.3648942789276001,
+      "severity_level": "WARNING",
+      "confidence": 0.9099295192850668,
+      "factors": {
+        "sentiment_factor": 0.9809661420722899,
+        "emotion_factor": 0.08622451680919464,
+        "volume_factor": 0.0,
+        "network_factor": 0.0
+      },
+      "weights": {
+        "sentiment": 0.35,
+        "emotion": 0.25,
+        "volume": 0.25,
+        "network": 0.15
+      },
+      "threshold_used": 0.25,
+      "calculation_timestamp": "2025-07-08T16:51:06.777314",
+      "data_points": 100,
+      "network_nodes": 0
+    },
+    "alerts": [
+      {
+        "alert_id": "ALERT_20250708_165106_5294",
+        "alert_type": "CRISIS_DETECTED",
+        "crisis_type": "health",
+        "severity_level": "WARNING",
+        "severity_score": 0.3648942789276001,
+        "message": "Health crisis warning with severity 0.365",
+        "metadata": {
+          "factors": {
+            "sentiment_factor": 0.9809661420722899,
+            "emotion_factor": 0.08622451680919464,
+            "volume_factor": 0.0,
+            "network_factor": 0.0
+          },
+          "confidence": 0.9099295192850668,
+          "data_points": 100,
+          "network_nodes": 0
+        },
+        "timestamp": "2025-07-08T16:51:06.783649",
+        "acknowledged": false,
+        "resolved": false
+      },
+      {
+        "alert_id": "ALERT_20250708_165106_6880",
+        "alert_type": "SENTIMENT_SHIFT",
+        "crisis_type": "health",
+        "severity_level": "MONITORED",
+        "severity_score": 0.9809661420722899,
+        "message": "Significant negative sentiment shift in health (factor: 0.981)",
+        "metadata": {
+          "sentiment_factor": 0.9809661420722899
+        },
+        "timestamp": "2025-07-08T16:51:06.783677",
+        "acknowledged": false,
+        "resolved": false
+      }
+    ],
+    "processing_time_seconds": 3.603347
+  }
+]
