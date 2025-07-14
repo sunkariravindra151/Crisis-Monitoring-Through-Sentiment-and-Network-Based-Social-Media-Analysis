@@ -1,2 +1,3 @@
-crisis_type,severity_score,severity_level,confidence
-health,0.3648942789276001,WARNING,0.9099295192850668
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ec76bde76293cac7d5f5d230299bd2d05303a434e35d6374fdabc96eb0b466f
+size 108
